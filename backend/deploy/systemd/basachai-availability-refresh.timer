@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the BasaChai listing availability refresh daily
+
+[Timer]
+OnCalendar=*-*-* 00:15:00 Asia/Dhaka
+Persistent=true
+AccuracySec=1min
+Unit=basachai-availability-refresh.service
+
+[Install]
+WantedBy=timers.target

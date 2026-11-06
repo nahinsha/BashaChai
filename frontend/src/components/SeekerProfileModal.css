@@ -1,0 +1,196 @@
+.seeker-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.seeker-modal {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d1e3db;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 650px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(8, 62, 51, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.seeker-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5eee9;
+}
+
+.seeker-modal__header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #173e33;
+}
+
+.seeker-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #55746a;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.4rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.seeker-modal__close:hover {
+  background: #edf5f1;
+  color: #173e33;
+}
+
+.seeker-modal__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.seeker-modal__identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #edf5f1;
+}
+
+.seeker-modal__avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.seeker-modal__identity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.seeker-modal__identity-info strong {
+  font-size: 1.2rem;
+  color: #173e33;
+  word-break: break-word;
+}
+
+.seeker-modal__role {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #087f60;
+  background: #e8f5f0;
+  border: 1px solid #c2e5d6;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+
+.seeker-modal__member-since {
+  font-size: 0.85rem;
+  color: #63847a;
+}
+
+.seeker-modal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.seeker-modal__section h3 {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4a6b61;
+}
+
+.seeker-modal__section p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #24483e;
+  white-space: pre-line;
+}
+
+.seeker-modal__section a {
+  color: #087f60;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.seeker-modal__section a:hover {
+  text-decoration: underline;
+}
+
+.seeker-modal__details {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  background: #f7faf8;
+  border: 1px solid #e3ede8;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.seeker-modal__details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.seeker-modal__details dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #63847a;
+}
+
+.seeker-modal__details dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #173e33;
+  word-break: break-word;
+}
+
+.seeker-modal__empty-note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #728f86;
+  font-style: italic;
+  padding: 0.75rem;
+  background: #f7faf8;
+  border-radius: 0.6rem;
+  text-align: center;
+}
+
+.seeker-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5eee9;
+  background: #fafcfb;
+  border-radius: 0 0 1rem 1rem;
+}
+

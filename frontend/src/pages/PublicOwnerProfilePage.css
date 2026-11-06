@@ -1,0 +1,17 @@
+.public-owner-page { display: grid; width: min(100%, var(--content-width)); align-content: start; gap: 1rem; margin-inline: auto; padding: clamp(1rem, 4vw, 2rem); border-radius: 1.25rem; background: linear-gradient(145deg, #e8f6f0, #f3faf7); }
+.public-owner-page__back { justify-self: start; color: #087458; }
+.public-owner-page .state-panel { border-color: #cfe7dd; }
+.public-owner-page .state-panel h1 { font-size: 1.35rem; }
+.public-owner-card { width: min(100%, 42rem); justify-self: center; }
+.public-owner-page__button { justify-self: start; border-color: #078f68; background: #078f68; color: #fff; }
+.public-owner-page__button:hover { background: #067453; }
+.public-owner-homes { display: grid; gap: 1rem; scroll-margin-top: 1.5rem; }
+.public-owner-homes__heading { display: grid; gap: .25rem; }
+.public-owner-homes__heading .eyebrow { margin: 0; color: #087458; }
+.public-owner-homes__heading h2 { margin: 0; color: #153d37; font-size: clamp(1.3rem, 3vw, 1.8rem); letter-spacing: -.035em; }
+.public-owner-homes .listing-grid { width: 100%; }
+.public-owner-homes .pagination { margin-top: .25rem; }
+@media (max-width: 40rem) {
+  .public-owner-page { padding: .9rem; }
+  .public-owner-page__button { width: 100%; justify-content: center; }
+}

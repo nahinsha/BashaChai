@@ -1,0 +1,62 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+backend/.env
+backend/media/
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Environment files and local secrets
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!.env.*.example
+!*.env.example
+!*.env.*.example
+.envrc
+
+# Database backups, exports, and local database files
+*.dump
+*.sql
+*.backup
+*.bak
+*.sqlite3
+*.db
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Python environments, caches, and build artifacts
+venv/
+env/
+ENV/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+htmlcov/
+coverage/
+build/
+dist/
+out/
+
+# Logs and operating-system files
+*.log
+logs/
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+frontend/__home_layout_capture.mjs

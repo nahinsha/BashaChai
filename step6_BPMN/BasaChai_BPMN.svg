@@ -1,0 +1,754 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://c2pa.org/manifest" width="3995" height="1350" viewBox="0 0 3995 1350" font-family="DejaVu Sans, Verdana, Arial, sans-serif"><ns0:metadata><ns1:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplOTUyYWJmZS1lNzkxLTRjMzYtYjE0Ny1hNTMyYjQzNjcxOGIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaOJJ4hesoudcRZ1xa+lC924AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4M2E2MGI3Mi0zMjBhLTQxZWEtYWQ2OS04MjNiYTA4MzRmZjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoF4qOzIhhbFfsqTxMvrJPVQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggY/Dy4SpaeW6QgAWj6U59PjjCUbCaz8fP0Aq/FLu3ckWkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaP616+r+fyDYTqKv2NrvNXwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBU9zLGl+z1pUvaoD8hvQCIdsU9AA02Rg3PeO1PaBRzbWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjQZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU5NTJhYmZlLWU3OTEtNGMzNi1iMTQ3LWE1MzJiNDM2NzE4Yi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjJmMzFmYWZlLTNhZDQtNDdiNi04ZmZmLWU4NzQyY2ZlZGMzY3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBj8PLhKlp5bpCABaPpTn0+OMJRsJrPx8/QCr8Uu7dyRaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggF1JvU6/3Ns6d5TV1t+FF1gBfe7lArs+v5+wP2BLNolGiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggu60aG4o9u80MXY2ysTgOf9vPUgYlx4V/GcJzKRnUgPx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQBh6+ml0FRKn4aRguKwXzp41Pmna9LV+I8dXbuSNZT0Xfn75InXNQj2iP9y0iWroTLas6cni8woUY0LzvpElz64=</ns1:manifest></ns0:metadata>
+<ns0:defs><ns0:marker id="arr" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><ns0:path d="M0,0 L10,4 L0,8 z" fill="#2b2b2b" /></ns0:marker></ns0:defs>
+<ns0:rect width="3995" height="1350" fill="#ffffff" />
+<ns0:rect x="20" y="20" width="3955" height="1240" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.8" />
+<ns0:rect x="20" y="20" width="30" height="1240" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.8" />
+<ns0:text x="40" y="640" font-size="12.5" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" transform="rotate(-90 40 640)">BasaChai: from listing to viewing</ns0:text>
+<ns0:rect x="50" y="20" width="3925" height="215" rx="0" fill="#F5E6F3" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:rect x="50" y="20" width="30" height="215" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:text x="70" y="127.5" font-size="11.5" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" transform="rotate(-90 70 127.5)">Admin / Moderator</ns0:text>
+<ns0:rect x="50" y="235" width="3925" height="295" rx="0" fill="#E6F2E7" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:rect x="50" y="235" width="30" height="295" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:text x="70" y="382.5" font-size="11.5" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" transform="rotate(-90 70 382.5)">Property Owner</ns0:text>
+<ns0:rect x="50" y="530" width="3925" height="295" rx="0" fill="#E7EDF8" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:rect x="50" y="530" width="30" height="295" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:text x="70" y="677.5" font-size="11.5" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" transform="rotate(-90 70 677.5)">BasaChai Platform (automated)</ns0:text>
+<ns0:rect x="50" y="825" width="3925" height="435" rx="0" fill="#FFF3D9" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:rect x="50" y="825" width="30" height="435" rx="0" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:text x="70" y="1042.5" font-size="11.5" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" transform="rotate(-90 70 1042.5)">Home Seeker</ns0:text>
+<ns0:rect x="1225" y="690" width="215" height="98" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="1233,690 1225,690 1225,788 1233,788" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="1234" y="715.2" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Needs all required fields, at least 1 valid</ns0:text>
+<ns0:text x="1234" y="725.8" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">image and no active moderation hold (FR-07,</ns0:text>
+<ns0:text x="1234" y="736.4" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">FR-09, FR-39). With a hold, publishing stays</ns0:text>
+<ns0:text x="1234" y="747" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">refused until an Admin releases it (UC-08 2a).</ns0:text>
+<ns0:text x="1234" y="757.6" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">A Removed listing cannot be published with</ns0:text>
+<ns0:text x="1234" y="768.2" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">the normal action (UC-08 1b).</ns0:text>
+<ns0:rect x="1300" y="838" width="180" height="130" rx="0" fill="#ffffff" fill-opacity="0.90" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="1308,838 1300,838 1300,968 1308,968" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="1309" y="860.0" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Account may hold both public roles.</ns0:text>
+<ns0:text x="1309" y="868.2" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">One conversation per seeker/listing; reuse history.</ns0:text>
+<ns0:text x="1309" y="876.4" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Different listings have separate conversations.</ns0:text>
+<ns0:text x="1309" y="884.6" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Reject own-listing conversations, requests and</ns0:text>
+<ns0:text x="1309" y="892.8" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">reports by the requesting account ID.</ns0:text>
+<ns0:text x="1309" y="901.0" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Viewing: Published + Available; max 1 Pending/listing.</ns0:text>
+<ns0:text x="1309" y="909.2" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Retry after Rejected/Cancelled; Accepted follows workflow.</ns0:text>
+<ns0:text x="1309" y="917.4" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Authenticated Home Seekers may report another owner's</ns0:text>
+<ns0:text x="1309" y="925.6" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Published listing; Owner-only cannot report. Admin reviews.</ns0:text>
+<ns0:text x="1309" y="933.8" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Visitor is unauthenticated, not a role.</ns0:text>
+<ns0:text x="1309" y="942.0" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Report status is separate from listing lifecycle.</ns0:text>
+<ns0:text x="1309" y="950.2" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Feedback leaves listing unchanged; unpublish preserves status.</ns0:text>
+<ns0:text x="1309" y="958.4" font-size="6.8" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Actions are independent; both may apply.</ns0:text>
+<ns0:rect x="1795" y="680" width="160" height="84" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="1803,680 1795,680 1795,764 1803,764" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="1804" y="708.8" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Missing data shown as unknown;</ns0:text>
+<ns0:text x="1804" y="719.4" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">availability label, last-confirmed</ns0:text>
+<ns0:text x="1804" y="730" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">and last-updated dates shown</ns0:text>
+<ns0:text x="1804" y="740.6" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">(FR-20, FR-21, BR-05, BR-11)</ns0:text>
+<ns0:rect x="1772" y="292" width="215" height="122" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="1780,292 1772,292 1772,414 1780,414" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="1781" y="312.9" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">OD-01: every Published listing has</ns0:text>
+<ns0:text x="1781" y="323.5" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">a confirmation date. In-app reminders: Day 5</ns0:text>
+<ns0:text x="1781" y="334.1" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">and Day 7. At 7 days without response, set</ns0:text>
+<ns0:text x="1781" y="344.7" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Needs Reconfirmation. Dashboard notice gives</ns0:text>
+<ns0:text x="1781" y="355.3" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Still Available / Not Available actions; each</ns0:text>
+<ns0:text x="1781" y="365.9" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">updates availability confirmation date. Email</ns0:text>
+<ns0:text x="1781" y="376.5" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">is planned subject to Q-02.</ns0:text>
+<ns0:text x="1781" y="387.1" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Content/image edits refresh updated_at.</ns0:text>
+<ns0:text x="1781" y="397.7" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Reconfirmation changes only confirmation time.</ns0:text>
+<ns0:rect x="2080" y="545" width="225" height="112" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="2088,545 2080,545 2080,657 2088,657" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="2089" y="577.2" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Login gate. Basis: FR-14 and UC-11 6a (ask to</ns0:text>
+<ns0:text x="2089" y="587.8" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">log in, return to property details), UC-14 1a,</ns0:text>
+<ns0:text x="2089" y="598.4" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">UC-18 2a (refused without login), UC-23 1a and</ns0:text>
+<ns0:text x="2089" y="609" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">FR-37. UC-20 names login only as a precondition</ns0:text>
+<ns0:text x="2089" y="619.6" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">and has no "not logged in" flow: documentation</ns0:text>
+<ns0:text x="2089" y="630.2" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">gap, left as is.</ns0:text>
+<ns0:rect x="2540" y="842" width="165" height="72" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="2548,842 2540,842 2540,914 2548,914" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="2549" y="870.1" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Max 3 properties; missing data</ns0:text>
+<ns0:text x="2549" y="880.7" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">stays blank; no "best" pick</ns0:text>
+<ns0:text x="2549" y="891.3" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">declared (FR-26 to FR-28, BR-07)</ns0:text>
+<ns0:rect x="3590" y="540" width="350" height="92" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="3598,540 3590,540 3590,632 3598,632" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="3599" y="572.8" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">OD-05 confirmed default: a Home Seeker can cancel their own Pending</ns0:text>
+<ns0:text x="3599" y="583.4" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">viewing request (status Cancelled); past date/time requests are rejected; no</ns0:text>
+<ns0:text x="3599" y="594" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">minimum notice or owner response deadline in the initial release. Needs</ns0:text>
+<ns0:text x="3599" y="604.6" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">confirmed in FR-35, FR-36, FR-44, BR-09, UC-21, UC-22 and UC-30.</ns0:text>
+<ns0:rect x="440" y="690" width="235" height="78" rx="0" fill="#ffffff" fill-opacity="0.80" stroke="#8a8a8a" stroke-width="1.0" />
+<ns0:polyline points="448,690 440,690 440,768 448,768" fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" />
+<ns0:text x="449" y="715.8" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">Dashboard shows only the owner's own listings,</ns0:text>
+<ns0:text x="449" y="726.4" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">each with publication status and availability status</ns0:text>
+<ns0:text x="449" y="737" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">(FR-43, BR-02, UC-29). Another owner's listings are</ns0:text>
+<ns0:text x="449" y="747.6" font-size="8.5" font-weight="normal" font-style="normal" fill="#333" text-anchor="start">refused (UC-29 2b).</ns0:text>
+<ns0:polyline points="1240,690 1240,618" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="1500,936 1500,979" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="1865,764 1865,959" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="1772,345 1720,345 1720,394" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="2110,657 2110,854" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="2630,914 2630,959" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="3800,632 3800,709" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="640,690 640,376" fill="none" stroke="#777" stroke-width="1.1" stroke-linejoin="round" stroke-dasharray="3,3" />
+<ns0:polyline points="132,340 160,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="280,340 300,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="360,376 360,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="420,610 457,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="503,610 600,610 600,376" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="660,340 707,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="753,340 1050,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="480,587 480,272 360,272 360,304" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1170,340 1182,340 1182,610 1202,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1248,610 1300,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1225,587 1225,272 360,272 360,304" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1420,610 1500,610 1500,376" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1560,340 1597,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1620,317 1620,285 1704,285" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1720,269 1720,252 1500,252 1500,304" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1620,363 1620,410 1704,410" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1736,410 1890,410 1890,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1950,610 1994,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1516,995 1585,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1645,959 1645,646" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1705,610 1770,610 1770,972" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1793,995 1845,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1770,1018 1770,1075 1645,1075 1645,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1965,995 1997,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2043,995 2082,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2128,995 2177,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2105,972 2105,926" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2005,890 1905,890 1905,959" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2223,995 2265,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2200,972 2200,926" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2020,1018 2020,1075 1645,1075 1645,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2385,995 2415,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2535,995 2570,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2690,995 2775,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2835,959 2835,646" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2835,574 2835,376" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2895,340 2975,340 2975,959" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3035,995 3072,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3118,995 3165,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3095,1018 3095,1075 1645,1075 1645,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3225,959 3225,633" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3202,610 3151,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3248,610 3305,610" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3365,574 3365,376" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3425,340 3505,340 3505,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3505,646 3505,959" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3565,995 3612,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3658,995 3715,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3635,1018 3635,1075 1645,1075 1645,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3835,995 3889,995" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2275,890 2325,890 2325,781" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2325,709 2325,204" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2385,168 2452,168" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2475,145 2475,62 2565,62" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2685,62 2744,62" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2498,168 2565,168" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2685,168 2745,168 2745,709" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2685,745 2650,745 2650,376" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2590,340 2561,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2475,191 2475,709" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2535,745 2579,745" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2200,1018 2200,1132" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2223,1155 2835,1155 2835,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2200,1178 2200,1215 3225,1215 3225,1031" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2836,168 2870,168" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="2990,168 3042,168" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3065,145 3065,78" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3065,191 3065,709" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3125,745 3149,745" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="730,363 730,396 790,396 790,414" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="730,363 730,396 930,396 930,414" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="730,363 730,396 1070,396 1070,414" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="790,486 790,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="790,646 790,729" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="930,486 930,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="930,646 930,729" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1070,486 1070,574" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="1070,646 1070,729" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3571,890 3620,890" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3680,854 3680,768" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3703,745 3740,745" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3680,722 3680,681" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:polyline points="3860,745 3894,745" fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" marker-end="url(#arr)" />
+<ns0:circle cx="116" cy="340" r="16" fill="#ffffff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:rect x="160" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="172" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="166,324 166,320 172,318 178,320 178,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="220" y="345.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Register / log in</ns0:text>
+<ns0:text x="220" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-01, UC-02</ns0:text>
+<ns0:rect x="300" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="312" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="306,324 306,320 312,318 318,320 318,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="360" y="334.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Create listing:</ns0:text>
+<ns0:text x="360" y="345.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">details, rent,</ns0:text>
+<ns0:text x="360" y="356.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">amenities, images</ns0:text>
+<ns0:text x="360" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-05, UC-07</ns0:text>
+<ns0:rect x="300" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="316.4,587 318.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="315.1,590.1 316.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="312,591.4 312,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="308.9,590.1 307.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="307.6,587 305.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="308.9,583.9 307.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="312,582.6 312,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="315.1,583.9 316.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="312" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="312" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="360" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Validate fields and</ns0:text>
+<ns0:text x="360" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">images; save as</ns0:text>
+<ns0:text x="360" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Draft</ns0:text>
+<ns0:text x="360" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-07, FR-10, FR-11</ns0:text>
+<ns0:polygon points="480,587 503,610 480,633 457,610" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="470.3,600.3 489.7,619.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="470.3,619.7 489.7,600.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="1050" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="1062" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="1056,324 1056,320 1062,318 1068,320 1068,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="1110" y="345.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Publish listing</ns0:text>
+<ns0:text x="1110" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-08</ns0:text>
+<ns0:polygon points="1225,587 1248,610 1225,633 1202,610" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="1215.3,600.3 1234.7,619.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="1215.3,619.7 1234.7,600.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="1300" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="1316.4,587 1318.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1315.1,590.1 1316.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1312,591.4 1312,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1308.9,590.1 1307.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1307.6,587 1305.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1308.9,583.9 1307.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1312,582.6 1312,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1315.1,583.9 1316.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="1312" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="1312" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="1360" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Set status</ns0:text>
+<ns0:text x="1360" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Published (visible</ns0:text>
+<ns0:text x="1360" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">in search)</ns0:text>
+<ns0:text x="1360" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-07, BR-04</ns0:text>
+<ns0:rect x="1440" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="1452" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="1446,324 1446,320 1452,318 1458,320 1458,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="1500" y="339.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Confirm availability</ns0:text>
+<ns0:text x="1500" y="351.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">(date recorded)</ns0:text>
+<ns0:text x="1500" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-10</ns0:text>
+<ns0:polygon points="1620,317 1643,340 1620,363 1597,340" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:circle cx="1620" cy="340" r="11" fill="none" stroke="#2b2b2b" stroke-width="1.3" />
+<ns0:circle cx="1620" cy="340" r="8.5" fill="none" stroke="#2b2b2b" stroke-width="1.3" />
+<ns0:polygon points="1620,334.8 1624.9,338.4 1623.1,344.2 1616.9,344.2 1615.1,338.4" fill="none" stroke="#2b2b2b" stroke-width="1.3" stroke-linejoin="round" />
+<ns0:circle cx="1720" cy="285" r="16" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5" />
+<ns0:circle cx="1720" cy="285" r="12.5" fill="none" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:rect x="1713.5" y="280.5" width="13" height="9" rx="0" fill="none" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polyline points="1713.5,280.5 1720,285.5 1726.5,280.5" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:circle cx="1720" cy="410" r="16" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5" />
+<ns0:circle cx="1720" cy="410" r="12.5" fill="none" stroke="#2b2b2b" stroke-width="1.2" />
+<ns0:circle cx="1720" cy="410" r="8" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polyline points="1720,410 1720,404.5" fill="none" stroke="#2b2b2b" stroke-width="1.2" stroke-linejoin="round" />
+<ns0:polyline points="1720,410 1723.8,412.2" fill="none" stroke="#2b2b2b" stroke-width="1.2" stroke-linejoin="round" />
+<ns0:rect x="1830" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="1846.4,587 1848.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1845.1,590.1 1846.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1842,591.4 1842,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1838.9,590.1 1837.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1837.6,587 1835.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1838.9,583.9 1837.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1842,582.6 1842,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1845.1,583.9 1846.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="1842" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="1842" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="1890" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Set availability to</ns0:text>
+<ns0:text x="1890" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Needs</ns0:text>
+<ns0:text x="1890" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Reconfirmation</ns0:text>
+<ns0:text x="1890" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-12, OD-01</ns0:text>
+<ns0:circle cx="2010" cy="610" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:circle cx="1500" cy="995" r="16" fill="#ffffff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:rect x="1585" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="1597" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="1591,979 1591,975 1597,973 1603,975 1603,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="1645" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Search and filter</ns0:text>
+<ns0:text x="1645" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">listings</ns0:text>
+<ns0:text x="1645" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-11</ns0:text>
+<ns0:rect x="1585" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="1601.4,587 1603.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1600.1,590.1 1601.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1597,591.4 1597,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1593.9,590.1 1592.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1592.6,587 1590.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1593.9,583.9 1592.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1597,582.6 1597,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1600.1,583.9 1601.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="1597" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="1597" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="1645" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Return Published</ns0:text>
+<ns0:text x="1645" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">matches with</ns0:text>
+<ns0:text x="1645" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">status labels</ns0:text>
+<ns0:text x="1645" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-14 to FR-19</ns0:text>
+<ns0:polygon points="1770,972 1793,995 1770,1018 1747,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="1760.3,985.3 1779.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="1760.3,1004.7 1779.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="1845" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="1857" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="1851,979 1851,975 1857,973 1863,975 1863,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="1905" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">View details and</ns0:text>
+<ns0:text x="1905" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">evaluate property</ns0:text>
+<ns0:text x="1905" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-12, UC-13</ns0:text>
+<ns0:polygon points="2020,972 2043,995 2020,1018 1997,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="2010.3,985.3 2029.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="2010.3,1004.7 2029.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="2265" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2277" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2271,979 2271,975 2277,973 2283,975 2283,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2325" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Add to shortlist (no</ns0:text>
+<ns0:text x="2325" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">duplicates)</ns0:text>
+<ns0:text x="2325" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-14</ns0:text>
+<ns0:rect x="2415" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2427" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2421,979 2421,975 2427,973 2433,975 2433,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2475" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">View shortlist and</ns0:text>
+<ns0:text x="2475" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">property status</ns0:text>
+<ns0:text x="2475" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-16</ns0:text>
+<ns0:rect x="2570" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2582" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2576,979 2576,975 2582,973 2588,975 2588,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2630" y="989.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Compare up to 3</ns0:text>
+<ns0:text x="2630" y="1000.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">shortlisted</ns0:text>
+<ns0:text x="2630" y="1011.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">properties</ns0:text>
+<ns0:text x="2630" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-17</ns0:text>
+<ns0:rect x="2775" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2787" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2781,979 2781,975 2787,973 2793,975 2793,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2835" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Message owner</ns0:text>
+<ns0:text x="2835" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">about the property</ns0:text>
+<ns0:text x="2835" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-18, UC-19</ns0:text>
+<ns0:rect x="2775" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="2791.4,587 2793.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2790.1,590.1 2791.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2787,591.4 2787,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2783.9,590.1 2782.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2782.6,587 2780.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2783.9,583.9 2782.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2787,582.6 2787,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2790.1,583.9 2791.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="2787" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="2787" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="2835" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Store message in</ns0:text>
+<ns0:text x="2835" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">private property</ns0:text>
+<ns0:text x="2835" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">conversation</ns0:text>
+<ns0:text x="2835" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-29 to FR-31, BR-08</ns0:text>
+<ns0:rect x="2775" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2787" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2781,324 2781,320 2787,318 2793,320 2793,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2835" y="339.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Read message and</ns0:text>
+<ns0:text x="2835" y="351.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">reply</ns0:text>
+<ns0:text x="2835" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-19</ns0:text>
+<ns0:rect x="2915" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2927" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2921,979 2921,975 2927,973 2933,975 2933,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2975" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Read reply and</ns0:text>
+<ns0:text x="2975" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">judge property</ns0:text>
+<ns0:text x="2975" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-19</ns0:text>
+<ns0:polygon points="3095,972 3118,995 3095,1018 3072,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="3085.3,985.3 3104.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="3085.3,1004.7 3104.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="3165" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="3177" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="3171,979 3171,975 3177,973 3183,975 3183,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="3225" y="989.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Submit viewing</ns0:text>
+<ns0:text x="3225" y="1000.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">request (preferred</ns0:text>
+<ns0:text x="3225" y="1011.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">date/time)</ns0:text>
+<ns0:text x="3225" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-20</ns0:text>
+<ns0:polygon points="3225,587 3248,610 3225,633 3202,610" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="3215.3,600.3 3234.7,619.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="3215.3,619.7 3234.7,600.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:circle cx="3135" cy="610" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:rect x="3305" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="3321.4,587 3323.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3320.1,590.1 3321.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3317,591.4 3317,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3313.9,590.1 3312.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3312.6,587 3310.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3313.9,583.9 3312.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3317,582.6 3317,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3320.1,583.9 3321.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="3317" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="3317" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="3365" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Create viewing</ns0:text>
+<ns0:text x="3365" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">request, status</ns0:text>
+<ns0:text x="3365" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Pending</ns0:text>
+<ns0:text x="3365" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-33, BR-09</ns0:text>
+<ns0:rect x="3305" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="3317" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="3311,324 3311,320 3317,318 3323,320 3323,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="3365" y="339.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Accept or reject</ns0:text>
+<ns0:text x="3365" y="351.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">viewing request</ns0:text>
+<ns0:text x="3365" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-22</ns0:text>
+<ns0:rect x="3445" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="3461.4,587 3463.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3460.1,590.1 3461.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3457,591.4 3457,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3453.9,590.1 3452.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3452.6,587 3450.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3453.9,583.9 3452.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3457,582.6 3457,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3460.1,583.9 3461.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="3457" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="3457" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="3505" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Record decision:</ns0:text>
+<ns0:text x="3505" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Accepted or</ns0:text>
+<ns0:text x="3505" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Rejected</ns0:text>
+<ns0:text x="3505" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-34, FR-36</ns0:text>
+<ns0:rect x="3445" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="3457" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="3451,979 3451,975 3457,973 3463,975 3463,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="3505" y="994.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Check viewing</ns0:text>
+<ns0:text x="3505" y="1006.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">request status</ns0:text>
+<ns0:text x="3505" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-21</ns0:text>
+<ns0:polygon points="3635,972 3658,995 3635,1018 3612,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="3625.3,985.3 3644.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="3625.3,1004.7 3644.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="3715" y="959" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="3727" cy="969" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="3721,979 3721,975 3727,973 3733,975 3733,979" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="3775" y="989.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Visit property;</ns0:text>
+<ns0:text x="3775" y="1000.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">verify condition</ns0:text>
+<ns0:text x="3775" y="1011.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">offline</ns0:text>
+<ns0:text x="3775" y="1024.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">BR-12</ns0:text>
+<ns0:circle cx="3905" cy="995" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:polygon points="2105,972 2128,995 2105,1018 2082,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="2095.3,985.3 2114.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="2095.3,1004.7 2114.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="2005" y="854" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2017" cy="864" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2011,874 2011,870 2017,868 2023,870 2023,874" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2065" y="895.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Log in or register</ns0:text>
+<ns0:text x="2065" y="919.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-01, UC-02</ns0:text>
+<ns0:polygon points="2200,972 2223,995 2200,1018 2177,995" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="2190.3,985.3 2209.7,1004.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="2190.3,1004.7 2209.7,985.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="2155" y="854" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2167" cy="864" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2161,874 2161,870 2167,868 2173,870 2173,874" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2215" y="889.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Report listing</ns0:text>
+<ns0:text x="2215" y="901.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">(reason required)</ns0:text>
+<ns0:text x="2215" y="919.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-23</ns0:text>
+<ns0:rect x="2265" y="709" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="2281.4,722 2283.4,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2280.1,725.1 2281.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2277,726.4 2277,728.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2273.9,725.1 2272.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2272.6,722 2270.6,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2273.9,718.9 2272.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2277,717.6 2277,715.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2280.1,718.9 2281.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="2277" cy="722" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="2277" cy="722" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="2325" y="739.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Store report as</ns0:text>
+<ns0:text x="2325" y="750.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Submitted in</ns0:text>
+<ns0:text x="2325" y="761.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">moderation queue</ns0:text>
+<ns0:text x="2325" y="774.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-37, FR-38</ns0:text>
+<ns0:rect x="2265" y="132" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2277" cy="142" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2271,152 2271,148 2277,146 2283,148 2283,152" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2325" y="167.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Review report and</ns0:text>
+<ns0:text x="2325" y="179.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">listing</ns0:text>
+<ns0:text x="2325" y="197.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-24, UC-25</ns0:text>
+<ns0:polygon points="2475,145 2498,168 2475,191 2452,168" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:circle cx="2475" cy="168" r="6" fill="none" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:rect x="2565" y="26" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2577" cy="36" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2571,46 2571,42 2577,40 2583,42 2583,46" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2625" y="61.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Reject report</ns0:text>
+<ns0:text x="2625" y="73.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">(status Rejected)</ns0:text>
+<ns0:text x="2625" y="91.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-25, UC-26</ns0:text>
+<ns0:circle cx="2760" cy="62" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:rect x="2565" y="132" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2577" cy="142" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2571,152 2571,148 2577,146 2583,148 2583,152" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2625" y="167.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Record feedback</ns0:text>
+<ns0:text x="2625" y="179.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">and resolve report</ns0:text>
+<ns0:text x="2625" y="197.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-26, UC-27</ns0:text>
+<ns0:rect x="2685" y="709" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="2701.4,722 2703.4,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2700.1,725.1 2701.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2697,726.4 2697,728.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2693.9,725.1 2692.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2692.6,722 2690.6,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2693.9,718.9 2692.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2697,717.6 2697,715.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2700.1,718.9 2701.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="2697" cy="722" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="2697" cy="722" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="2745" y="739.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Show feedback on</ns0:text>
+<ns0:text x="2745" y="750.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">owner dashboard;</ns0:text>
+<ns0:text x="2745" y="761.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">email owner</ns0:text>
+<ns0:text x="2745" y="774.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-42</ns0:text>
+<ns0:rect x="2590" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2602" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2596,324 2596,320 2602,318 2608,320 2608,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2650" y="339.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">View feedback and</ns0:text>
+<ns0:text x="2650" y="351.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">update listing</ns0:text>
+<ns0:text x="2650" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-28, UC-06</ns0:text>
+<ns0:circle cx="2545" cy="340" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:rect x="2415" y="709" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="2431.4,722 2433.4,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2430.1,725.1 2431.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2427,726.4 2427,728.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2423.9,725.1 2422.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2422.6,722 2420.6,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2423.9,718.9 2422.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2427,717.6 2427,715.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="2430.1,718.9 2431.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="2427" cy="722" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="2427" cy="722" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="2475" y="739.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Unpublish listing</ns0:text>
+<ns0:text x="2475" y="750.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">and set moderation</ns0:text>
+<ns0:text x="2475" y="761.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">hold</ns0:text>
+<ns0:text x="2475" y="774.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-39, FR-09</ns0:text>
+<ns0:circle cx="2595" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:rect x="540" y="304" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="552" cy="314" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="546,324 546,320 552,318 558,320 558,324" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="600" y="334.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">View own listings</ns0:text>
+<ns0:text x="600" y="345.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">and statuses</ns0:text>
+<ns0:text x="600" y="356.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">(dashboard)</ns0:text>
+<ns0:text x="600" y="369.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-29, FR-43</ns0:text>
+<ns0:polygon points="2200,1132 2223,1155 2200,1178 2177,1155" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="2190.3,1145.3 2209.7,1164.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="2190.3,1164.7 2209.7,1145.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:circle cx="2820" cy="168" r="16" fill="#ffffff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:rect x="2870" y="132" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="2882" cy="142" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="2876,152 2876,148 2882,146 2888,148 2888,152" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="2930" y="162.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Review held listing;</ns0:text>
+<ns0:text x="2930" y="173.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">release moderation</ns0:text>
+<ns0:text x="2930" y="184.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">hold</ns0:text>
+<ns0:text x="2930" y="197.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-26, FR-39</ns0:text>
+<ns0:polygon points="3065,145 3088,168 3065,191 3042,168" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="3055.3,158.3 3074.7,177.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="3055.3,177.7 3074.7,158.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:circle cx="3065" cy="62" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:rect x="3005" y="709" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="3021.4,722 3023.4,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3020.1,725.1 3021.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3017,726.4 3017,728.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3013.9,725.1 3012.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3012.6,722 3010.6,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3013.9,718.9 3012.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3017,717.6 3017,715.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3020.1,718.9 3021.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="3017" cy="722" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="3017" cy="722" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="3065" y="739.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Remove hold;</ns0:text>
+<ns0:text x="3065" y="750.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">listing stays</ns0:text>
+<ns0:text x="3065" y="761.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Unpublished</ns0:text>
+<ns0:text x="3065" y="774.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">FR-39, FR-09</ns0:text>
+<ns0:circle cx="3165" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:polygon points="730,317 753,340 730,363 707,340" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="720.3,330.3 739.7,349.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="720.3,349.7 739.7,330.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="730" y="414" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="742" cy="424" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="736,434 736,430 742,428 748,430 748,434" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="790" y="449.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Update own listing</ns0:text>
+<ns0:text x="790" y="461.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">details</ns0:text>
+<ns0:text x="790" y="479.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-06, FR-08</ns0:text>
+<ns0:rect x="870" y="414" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="882" cy="424" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="876,434 876,430 882,428 888,430 888,434" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="930" y="449.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Unpublish own</ns0:text>
+<ns0:text x="930" y="461.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">listing</ns0:text>
+<ns0:text x="930" y="479.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-08, FR-09</ns0:text>
+<ns0:rect x="1010" y="414" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="1022" cy="424" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="1016,434 1016,430 1022,428 1028,430 1028,434" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="1070" y="449.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Remove own listing</ns0:text>
+<ns0:text x="1070" y="461.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">(after confirming)</ns0:text>
+<ns0:text x="1070" y="479.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-09, FR-09</ns0:text>
+<ns0:rect x="730" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="746.4,587 748.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="745.1,590.1 746.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="742,591.4 742,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="738.9,590.1 737.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="737.6,587 735.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="738.9,583.9 737.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="742,582.6 742,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="745.1,583.9 746.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="742" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="742" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="790" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Validate, save,</ns0:text>
+<ns0:text x="790" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">refresh</ns0:text>
+<ns0:text x="790" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">last-updated date</ns0:text>
+<ns0:text x="790" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-06, FR-10, FR-13</ns0:text>
+<ns0:rect x="870" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="886.4,587 888.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="885.1,590.1 886.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="882,591.4 882,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="878.9,590.1 877.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="877.6,587 875.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="878.9,583.9 877.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="882,582.6 882,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="885.1,583.9 886.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="882" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="882" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="930" y="604.3" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Set Unpublished;</ns0:text>
+<ns0:text x="930" y="615.5" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">hide from public</ns0:text>
+<ns0:text x="930" y="626.7" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">search</ns0:text>
+<ns0:text x="930" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-08, FR-09</ns0:text>
+<ns0:rect x="1010" y="574" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="1026.4,587 1028.4,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1025.1,590.1 1026.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1022,591.4 1022,593.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1018.9,590.1 1017.5,591.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1017.6,587 1015.6,587" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1018.9,583.9 1017.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1022,582.6 1022,580.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="1025.1,583.9 1026.5,582.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="1022" cy="587" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="1022" cy="587" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="1070" y="609.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Set Removed; keep</ns0:text>
+<ns0:text x="1070" y="621.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">request history</ns0:text>
+<ns0:text x="1070" y="639.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">UC-09, FR-09</ns0:text>
+<ns0:circle cx="790" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:circle cx="930" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:circle cx="1070" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:circle cx="3555" cy="890" r="16" fill="#ffffff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:rect x="3620" y="854" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:circle cx="3632" cy="864" r="3" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:polygon points="3626,874 3626,870 3632,868 3638,870 3638,874" fill="none" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round" />
+<ns0:text x="3680" y="889.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Cancel own viewing</ns0:text>
+<ns0:text x="3680" y="901.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">request</ns0:text>
+<ns0:text x="3680" y="919.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">OD-05, FR-36, FR-44, UC-30</ns0:text>
+<ns0:polygon points="3680,722 3703,745 3680,768 3657,745" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6" stroke-linejoin="round" />
+<ns0:polyline points="3670.3,735.3 3689.7,754.7" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:polyline points="3670.3,754.7 3689.7,735.3" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linejoin="round" />
+<ns0:rect x="3740" y="709" width="120" height="72" rx="9" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.6" />
+<ns0:polyline points="3756.4,722 3758.4,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3755.1,725.1 3756.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3752,726.4 3752,728.4" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3748.9,725.1 3747.5,726.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3747.6,722 3745.6,722" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3748.9,718.9 3747.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3752,717.6 3752,715.6" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:polyline points="3755.1,718.9 3756.5,717.5" fill="none" stroke="#2b2b2b" stroke-width="1.8" stroke-linejoin="round" />
+<ns0:circle cx="3752" cy="722" r="4.6" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:circle cx="3752" cy="722" r="1.6" fill="none" stroke="#2b2b2b" stroke-width="1.0" />
+<ns0:text x="3800" y="744.9" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Set status</ns0:text>
+<ns0:text x="3800" y="756.1" font-size="9.6" font-weight="bold" font-style="normal" fill="#1b1b1b" text-anchor="middle">Cancelled</ns0:text>
+<ns0:text x="3800" y="774.5" font-size="8" font-weight="normal" font-style="italic" fill="#666" text-anchor="middle">OD-05, BR-09, FR-44, UC-30</ns0:text>
+<ns0:circle cx="3910" cy="745" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:circle cx="3680" cy="665" r="16" fill="#ffffff" stroke="#b71c1c" stroke-width="4.0" />
+<ns0:text x="118" y="372" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Owner lists a</ns0:text>
+<ns0:text x="118" y="382.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">property</ns0:text>
+<ns0:text x="480" y="658" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Valid?</ns0:text>
+<ns0:text x="1213" y="670" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Publish rules</ns0:text>
+<ns0:text x="1213" y="680.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">met?</ns0:text>
+<ns0:text x="1620" y="372" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke" />
+<ns0:text x="1742" y="274" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Owner reconfirms</ns0:text>
+<ns0:text x="1742" y="284.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">(UC-10)</ns0:text>
+<ns0:text x="1720" y="442" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">7 days without reconfirmation</ns0:text>
+<ns0:text x="1720" y="452.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">(OD-01)</ns0:text>
+<ns0:text x="2010" y="642" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Shown as Needs</ns0:text>
+<ns0:text x="2010" y="652.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Reconfirmation</ns0:text>
+<ns0:text x="1500" y="1027" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Home Seeker needs a</ns0:text>
+<ns0:text x="1500" y="1037.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">rental home</ns0:text>
+<ns0:text x="1770" y="967" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Matches?</ns0:text>
+<ns0:text x="2004" y="973" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Decision</ns0:text>
+<ns0:text x="3095" y="967" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Worth a visit?</ns0:text>
+<ns0:text x="3225" y="568" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Request valid?</ns0:text>
+<ns0:text x="3135" y="642" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Request refused: past or</ns0:text>
+<ns0:text x="3135" y="652.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">invalid date/time, listing not</ns0:text>
+<ns0:text x="3135" y="663.6" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Available, or duplicate</ns0:text>
+<ns0:text x="3135" y="674.4" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Pending (UC-20 4a, 4b)</ns0:text>
+<ns0:text x="3635" y="967" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Accepted?</ns0:text>
+<ns0:text x="3905" y="1037" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Final decision made</ns0:text>
+<ns0:text x="2105" y="1033" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Logged in?</ns0:text>
+<ns0:text x="2190" y="1055" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Which action?</ns0:text>
+<ns0:text x="2430" y="132" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Actions may combine</ns0:text>
+<ns0:text x="2760" y="94" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Report rejected</ns0:text>
+<ns0:text x="2545" y="298" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Owner updates listing if</ns0:text>
+<ns0:text x="2545" y="308.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">needed</ns0:text>
+<ns0:text x="2595" y="787" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Hidden until Admin</ns0:text>
+<ns0:text x="2595" y="797.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">releases hold</ns0:text>
+<ns0:text x="2176" y="1155" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Message or viewing</ns0:text>
+<ns0:text x="2176" y="1165.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">request?</ns0:text>
+<ns0:text x="2820" y="200" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Admin reviews a listing on</ns0:text>
+<ns0:text x="2820" y="210.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">moderation hold</ns0:text>
+<ns0:text x="3075" y="200" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Hold active?</ns0:text>
+<ns0:text x="3088" y="56" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Release refused: no active</ns0:text>
+<ns0:text x="3088" y="66.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">hold (UC-26 3a)</ns0:text>
+<ns0:text x="3165" y="777" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Owner may publish</ns0:text>
+<ns0:text x="3165" y="787.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">again if FR-07</ns0:text>
+<ns0:text x="3165" y="798.6" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">conditions are met</ns0:text>
+<ns0:text x="3165" y="809.4" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">(UC-08)</ns0:text>
+<ns0:text x="730" y="308" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Which action?</ns0:text>
+<ns0:text x="790" y="777" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Listing updated</ns0:text>
+<ns0:text x="790" y="787.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">(errors keep old data)</ns0:text>
+<ns0:text x="930" y="777" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Hidden; may be</ns0:text>
+<ns0:text x="930" y="787.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">published again (no</ns0:text>
+<ns0:text x="930" y="798.6" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">hold)</ns0:text>
+<ns0:text x="1070" y="777" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Removed; not</ns0:text>
+<ns0:text x="1070" y="787.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">publishable normally</ns0:text>
+<ns0:text x="3555" y="922" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Seeker cancels own</ns0:text>
+<ns0:text x="3555" y="932.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">viewing request</ns0:text>
+<ns0:text x="3654" y="741" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Own request, still</ns0:text>
+<ns0:text x="3654" y="751.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="end" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Pending?</ns0:text>
+<ns0:text x="3910" y="777" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Request cancelled;</ns0:text>
+<ns0:text x="3910" y="787.8" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">owner can no longer</ns0:text>
+<ns0:text x="3910" y="798.6" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">respond</ns0:text>
+<ns0:text x="3702" y="658" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cancel refused: not</ns0:text>
+<ns0:text x="3702" y="668.8" font-size="9" font-weight="bold" font-style="normal" fill="#2b2b2b" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">own or not Pending</ns0:text>
+<ns0:text x="540" y="600" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="880" y="319" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Publish</ns0:text>
+<ns0:text x="488" y="398" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: show errors</ns0:text>
+<ns0:text x="1275" y="600" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="1233" y="403" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: refused, reason shown</ns0:text>
+<ns0:text x="1810" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="1778" y="1055" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: change filters</ns0:text>
+<ns0:text x="2062" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Interested</ns0:text>
+<ns0:text x="2152" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="2113" y="936" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: asked to log in</ns0:text>
+<ns0:text x="1950" y="877" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Return to property details</ns0:text>
+<ns0:text x="2244" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Shortlist</ns0:text>
+<ns0:text x="2208" y="938" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Report</ns0:text>
+<ns0:text x="2028" y="1055" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Not suitable</ns0:text>
+<ns0:text x="3142" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="3103" y="1055" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: not worth visiting</ns0:text>
+<ns0:text x="3178" y="600" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No</ns0:text>
+<ns0:text x="3275" y="600" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="3688" y="985" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="3643" y="1055" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No: Rejected</ns0:text>
+<ns0:text x="2482" y="84" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Reject</ns0:text>
+<ns0:text x="2531" y="158" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Correction</ns0:text>
+<ns0:text x="2483" y="408" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Policy violation</ns0:text>
+<ns0:text x="2208" y="1048" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Contact owner</ns0:text>
+<ns0:text x="2235" y="1148" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Message owner</ns0:text>
+<ns0:text x="2208" y="1196" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Request viewing</ns0:text>
+<ns0:text x="3072" y="112" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No</ns0:text>
+<ns0:text x="3073" y="408" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="797" y="386" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Update</ns0:text>
+<ns0:text x="937" y="386" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Unpublish</ns0:text>
+<ns0:text x="1077" y="386" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Remove</ns0:text>
+<ns0:text x="3721" y="735" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="middle" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Yes</ns0:text>
+<ns0:text x="3688" y="713" font-size="8.6" font-weight="normal" font-style="italic" fill="#222" text-anchor="start" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">No</ns0:text>
+<ns0:rect x="60" y="1278" width="110" height="34" rx="7" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.4" />
+<ns0:text x="115" y="1299" font-size="9" font-weight="bold" font-style="normal" fill="#222" text-anchor="middle">User task</ns0:text>
+<ns0:rect x="190" y="1278" width="130" height="34" rx="7" fill="#ffffff" fill-opacity="1.00" stroke="#2b2b2b" stroke-width="1.4" />
+<ns0:text x="255" y="1299" font-size="9" font-weight="bold" font-style="normal" fill="#222" text-anchor="middle">Platform service task</ns0:text>
+<ns0:polygon points="360,1295 380,1278 400,1295 380,1312" fill="#fff" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" />
+<ns0:text x="410" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">Exclusive gateway (XOR)</ns0:text>
+<ns0:circle cx="580" cy="1295" r="11" fill="#fff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:text x="598" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">Start</ns0:text>
+<ns0:circle cx="660" cy="1295" r="11" fill="#fff" stroke="#2e7d32" stroke-width="1.8" />
+<ns0:circle cx="660" cy="1295" r="7" fill="none" stroke="#2e7d32" stroke-width="1.1" />
+<ns0:text x="678" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">Timer start</ns0:text>
+<ns0:circle cx="780" cy="1295" r="11" fill="#fff" stroke="#b71c1c" stroke-width="3.6" />
+<ns0:text x="798" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">End</ns0:text>
+<ns0:circle cx="870" cy="1295" r="11" fill="#fff" stroke="#2b2b2b" stroke-width="1.4" />
+<ns0:circle cx="870" cy="1295" r="8" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:text x="888" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">Timer / message catch</ns0:text>
+<ns0:polygon points="1070,1295 1090,1278 1110,1295 1090,1312" fill="#fff" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round" />
+<ns0:circle cx="1090" cy="1295" r="7" fill="none" stroke="#2b2b2b" stroke-width="1.1" />
+<ns0:text x="1120" y="1299" font-size="9" font-weight="normal" font-style="normal" fill="#2b2b2b" text-anchor="start">Event-based gateway</ns0:text>
+<ns0:text x="1290" y="1299" font-size="8.6" font-weight="normal" font-style="italic" fill="#555" text-anchor="start">UC-nn / FR-nn / BR-nn / OD-nn = traceability to Steps 4 and 5.   Admin accounts exist outside this process (BR-01, OD-09).</ns0:text>
+</ns0:svg>

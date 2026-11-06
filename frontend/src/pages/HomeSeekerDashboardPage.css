@@ -1,0 +1,403 @@
+.seeker-dashboard {
+  width: 100%;
+  min-width: 0;
+  color: #153d37;
+}
+
+.seeker-dashboard__heading {
+  margin-bottom: 1rem;
+}
+
+.seeker-dashboard__heading h1 {
+  margin: .15rem 0 .2rem;
+  color: #153d37;
+  font-size: clamp(1.65rem, 2.5vw, 2rem);
+  letter-spacing: -.04em;
+  line-height: 1.2;
+}
+
+.seeker-dashboard__heading p {
+  margin: 0;
+  color: #45635a;
+}
+
+.seeker-dashboard__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
+.seeker-dashboard__metric {
+  display: flex;
+  min-width: 0;
+  min-height: 7rem;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .9rem 1rem;
+  border: 1px solid #cfe7dd;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 .25rem .75rem rgb(21 61 55 / 4%);
+  color: #153d37;
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.seeker-dashboard__metric:hover {
+  border-color: #82c8aa;
+  box-shadow: 0 .45rem 1rem rgb(21 61 55 / 8%);
+}
+
+.seeker-dashboard__metric > strong {
+  color: #078f68;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.seeker-dashboard__metric > span {
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.seeker-dashboard__metric > small {
+  color: #58736a;
+  font-size: .8rem;
+  line-height: 1.35;
+}
+
+.seeker-dashboard__notice {
+  margin-bottom: 1rem;
+  padding: .8rem 1rem;
+  border-radius: .9rem;
+  background: #fff2cc;
+  color: #604715;
+  line-height: 1.5;
+}
+
+.seeker-dashboard__notice strong {
+  display: block;
+  margin-bottom: .1rem;
+  color: #49350f;
+}
+
+.seeker-dashboard__notice p {
+  margin: 0;
+}
+
+.seeker-dashboard__notice a {
+  color: #604715;
+  font-weight: 700;
+  text-underline-offset: .12em;
+}
+
+.seeker-dashboard__columns {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(18rem, 2fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.seeker-dashboard__panel {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #cfe7dd;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 .3rem 1rem rgb(21 61 55 / 4%);
+}
+
+.seeker-dashboard__section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .55rem;
+}
+
+.seeker-dashboard__section-heading h2 {
+  min-width: 0;
+  margin: 0;
+  color: #153d37;
+  font-size: 1.05rem;
+  letter-spacing: -.02em;
+}
+
+.seeker-dashboard__section-heading a {
+  flex: 0 0 auto;
+  color: #087458;
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.seeker-dashboard__section-heading a:hover {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.seeker-dashboard__request-row {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 5.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .75rem;
+  padding: .8rem 0;
+  border-top: 1px solid #dcece4;
+}
+
+.seeker-dashboard__thumb {
+  display: block;
+  width: 5.25rem;
+  height: 4rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: .6rem;
+  background: #e9f5ee;
+}
+
+.seeker-dashboard__thumb svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.seeker-dashboard__thumb-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seeker-dashboard__thumb-image--empty {
+  display: grid;
+  place-items: center;
+  padding: .2rem;
+  color: #58736a;
+  font-size: .62rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.seeker-dashboard__thumb--0 .seeker-dashboard__thumb-sky { fill: #edf2df; }
+.seeker-dashboard__thumb--0 .seeker-dashboard__thumb-ground { fill: #a7b99b; }
+.seeker-dashboard__thumb--0 .seeker-dashboard__thumb-building { fill: #bdc98a; }
+.seeker-dashboard__thumb--0 .seeker-dashboard__thumb-window { fill: #edf4df; }
+.seeker-dashboard__thumb--1 .seeker-dashboard__thumb-sky { fill: #dff1e8; }
+.seeker-dashboard__thumb--1 .seeker-dashboard__thumb-ground { fill: #a4c6b9; }
+.seeker-dashboard__thumb--1 .seeker-dashboard__thumb-building { fill: #77c6a2; }
+.seeker-dashboard__thumb--1 .seeker-dashboard__thumb-window { fill: #eef8f2; }
+.seeker-dashboard__thumb--2 .seeker-dashboard__thumb-sky { fill: #e7efe7; }
+.seeker-dashboard__thumb--2 .seeker-dashboard__thumb-ground { fill: #abbcaf; }
+.seeker-dashboard__thumb--2 .seeker-dashboard__thumb-building { fill: #80a895; }
+.seeker-dashboard__thumb--2 .seeker-dashboard__thumb-window { fill: #f3f7ef; }
+
+.seeker-dashboard__row-copy {
+  display: grid;
+  min-width: 0;
+  gap: .15rem;
+  align-content: center;
+  color: #45635a;
+  font-size: .82rem;
+  line-height: 1.4;
+}
+
+.seeker-dashboard__row-copy > strong {
+  overflow-wrap: anywhere;
+  color: #153d37;
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+.seeker-dashboard__row-copy > strong a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.seeker-dashboard__row-copy > strong a:hover {
+  color: #087458;
+  text-decoration: underline;
+  text-underline-offset: .12em;
+}
+
+.seeker-dashboard__row-copy > span:not(.seeker-dashboard__pill) {
+  overflow-wrap: anywhere;
+}
+
+.seeker-dashboard__request-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+
+.seeker-dashboard__pill {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  padding: .18rem .55rem;
+  border-radius: 99px;
+  background: #e4f4eb;
+  color: #216640;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.seeker-dashboard__pill--request-pending,
+.seeker-dashboard__pill--availability-needs_reconfirmation {
+  background: #fff0c7;
+  color: #795816;
+}
+
+.seeker-dashboard__pill--request-rejected,
+.seeker-dashboard__pill--availability-unavailable {
+  background: #fcebe7;
+  color: #8d392f;
+}
+
+.seeker-dashboard__pill--request-cancelled {
+  background: #edf2f0;
+  color: #52665e;
+}
+
+.seeker-dashboard__cancel {
+  min-height: 2.5rem;
+  padding: .45rem .7rem;
+  border: 1px solid #078f68;
+  border-radius: .65rem;
+  background: transparent;
+  color: #087458;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.seeker-dashboard__cancel:hover:not(:disabled) {
+  background: #e8f6f0;
+}
+
+.seeker-dashboard__cancel:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.seeker-dashboard__row-message {
+  color: #087458;
+  font-size: .75rem;
+}
+
+.seeker-dashboard__saved-row {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 5.25rem minmax(0, 1fr);
+  align-items: center;
+  gap: .75rem;
+  padding: .8rem 0;
+  border-top: 1px solid #dcece4;
+}
+
+.seeker-dashboard__saved-row .seeker-dashboard__row-copy {
+  justify-items: start;
+}
+
+.seeker-dashboard__empty {
+  margin: 0;
+  padding: 1rem .25rem .35rem;
+  color: #58736a;
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+.seeker-dashboard__state {
+  display: grid;
+  min-height: 8rem;
+  align-content: center;
+  justify-items: start;
+  gap: .5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #cfe7dd;
+  border-radius: 1rem;
+  background: #fff;
+  color: #45635a;
+}
+
+.seeker-dashboard__state h2,
+.seeker-dashboard__state p {
+  margin: 0;
+}
+
+.seeker-dashboard__state h2 {
+  color: #153d37;
+  font-size: 1rem;
+}
+
+.seeker-dashboard__state--error {
+  border-color: #ead8d4;
+}
+
+@media (max-width: 64rem) {
+  .seeker-dashboard__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seeker-dashboard__columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+  .seeker-dashboard__heading {
+    margin-bottom: .8rem;
+  }
+
+  .seeker-dashboard__metric {
+    min-height: 6.5rem;
+    padding: .75rem .8rem;
+  }
+
+  .seeker-dashboard__request-row {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: .55rem .65rem;
+  }
+
+  .seeker-dashboard__request-row .seeker-dashboard__thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .seeker-dashboard__request-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .seeker-dashboard__saved-row {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: .55rem .65rem;
+  }
+
+  .seeker-dashboard__saved-row .seeker-dashboard__thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .seeker-dashboard__metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .seeker-dashboard__metric {
+    min-height: 5.5rem;
+  }
+
+  .seeker-dashboard__panel {
+    padding: .8rem;
+  }
+}
