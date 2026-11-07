@@ -199,7 +199,7 @@ class SessionAndProfileTests(APITestCase):
         )
 
         self.assertEqual(logout.status_code, status.HTTP_204_NO_CONTENT)
-        self.assertEqual(logout.cookies[self.refresh_cookie_name]["max-age"], "0")
+        self.assertEqual(logout.cookies[self.refresh_cookie_name]["max-age"], 0)
         self.assertEqual(refresh_after_logout.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(refresh_after_logout.data["error"]["code"], "invalid_token")
 
@@ -616,7 +616,7 @@ class PasswordRecoveryTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(response.content, b"")
-        self.assertEqual(response.cookies["basachai_refresh"]["max-age"], "0")
+        self.assertEqual(response.cookies["basachai_refresh"]["max-age"], 0)
         self.user.refresh_from_db()
         self.assertTrue(self.user.check_password("A-different-password-87!"))
         self.assertFalse(self.user.check_password("A-strong-random-password-42!"))
