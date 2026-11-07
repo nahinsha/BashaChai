@@ -1,8 +1,7 @@
 import uuid
 from pathlib import Path
 
-from django.conf import settings
-from django.core.files.storage import FileSystemStorage
+from django.core.files.storage import storages
 from django.db import models
 from django.db.models import Q, Value
 from django.db.models.deletion import ProtectedError
@@ -13,11 +12,7 @@ from accounts.models import User
 from listings.models import Listing
 
 
-message_attachment_storage = FileSystemStorage(
-    location=settings.MESSAGE_ATTACHMENT_ROOT,
-    file_permissions_mode=0o640,
-    directory_permissions_mode=0o750,
-)
+message_attachment_storage = storages["private_attachments"]
 
 
 def message_attachment_path(instance, filename):
