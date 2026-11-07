@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchAuthenticatedImage } from '../api.js'
+import { fetchAuthenticatedImage, resolveApiUrl } from '../api.js'
 
 export default function PropertyImage({
   src,
@@ -55,7 +55,7 @@ export default function PropertyImage({
       alt={alt}
       className={className}
       onError={() => setFailedSource(src)}
-      src={authenticated ? blobUrl : src}
+      src={authenticated ? blobUrl : resolveApiUrl(src)}
     />
   )
 }
