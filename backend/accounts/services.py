@@ -4,15 +4,20 @@ from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth.tokens import default_token_generator
 from django.core import signing
 from django.core.exceptions import ValidationError as DjangoValidationError
+from django.core.files.storage import default_storage
 from django.core.mail import send_mail
 from django.db import transaction
+from django.utils import timezone
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from urllib.parse import urlencode
 from uuid import uuid4
 
-from django.core.files.storage import default_storage
 from rest_framework.exceptions import APIException, ValidationError
+from rest_framework_simplejwt.token_blacklist.models import (
+    BlacklistedToken,
+    OutstandingToken,
+)
 
 from listings.image_validation import validate_listing_image
 
@@ -166,4 +171,10 @@ def reset_account_password(token, new_password):
 
     user.set_password(new_password)
     user.save(update_fields=("password",))
+    active_refresh_tokens = OutstandingToken.objects.select_for_update().filter(
+        user=user,
+        expires_at__gt=timezone.now(),
+    )
+    for outstanding_token in active_refresh_tokens.iterator():
+        BlacklistedToken.objects.get_or_create(token=outstanding_token)
     return user

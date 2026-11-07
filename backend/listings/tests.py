@@ -1,6 +1,8 @@
 from datetime import timedelta
 from io import BytesIO
 from tempfile import TemporaryDirectory
+import warnings
+from unittest.mock import MagicMock, patch
 
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.db.models.deletion import ProtectedError
@@ -821,6 +823,33 @@ class ListingPolicyUnitTests(SimpleTestCase):
         )
         with self.assertRaises(DRFValidationError):
             validate_listing_image(too_large)
+
+    def test_image_validation_rejects_decompression_bomb_warnings(self):
+        image = make_image()
+
+        def emit_decompression_warning(*_args, **_kwargs):
+            warnings.warn("decompression bomb", Image.DecompressionBombWarning)
+
+        with patch(
+            "listings.image_validation.Image.open",
+            side_effect=emit_decompression_warning,
+        ):
+            with self.assertRaises(DRFValidationError):
+                validate_listing_image(image)
+
+    def test_image_validation_enforces_pixel_limit_before_decoding(self):
+        image = make_image()
+        image_context = MagicMock()
+        image_context.__enter__.return_value.width = 5001
+        image_context.__enter__.return_value.height = 5000
+        image_context.__enter__.return_value.format = "JPEG"
+
+        with patch(
+            "listings.image_validation.Image.open",
+            return_value=image_context,
+        ):
+            with self.assertRaisesRegex(DRFValidationError, "25 megapixels"):
+                validate_listing_image(image)
 
     def test_availability_reminder_boundaries(self):
         now = timezone.now()

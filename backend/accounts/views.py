@@ -28,6 +28,7 @@ from .serializers import (
 )
 from .models import RoleMembership
 from .permissions import HasAccountProfileRole, HasPublicRole
+from .throttling import PersistentAuthRateThrottle
 from moderation.permissions import IsAdminModerator
 from .services import (
     InvalidPasswordResetToken,
@@ -69,9 +70,20 @@ def validation_error(fields):
 class PublicAPIView(APIView):
     authentication_classes = []
     permission_classes = [AllowAny]
+    auth_throttle_scope = None
+
+    def get_throttles(self):
+        if self.auth_throttle_scope is None:
+            return super().get_throttles()
+        return [
+            PersistentAuthRateThrottle(f"{self.auth_throttle_scope}_ip", "ip"),
+            PersistentAuthRateThrottle(f"{self.auth_throttle_scope}_email", "email"),
+        ]
 
 
 class RegisterView(PublicAPIView):
+    auth_throttle_scope = "auth_register"
+
     def post(self, request):
         serializer = RegistrationSerializer(data=request.data)
         if not serializer.is_valid():
@@ -84,6 +96,8 @@ class RegisterView(PublicAPIView):
 
 
 class LoginView(PublicAPIView):
+    auth_throttle_scope = "auth_login"
+
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
         if not serializer.is_valid():
@@ -153,6 +167,8 @@ class LogoutView(PublicAPIView):
 
 
 class PasswordResetRequestView(PublicAPIView):
+    auth_throttle_scope = "auth_password_reset"
+
     def post(self, request):
         serializer = PasswordResetRequestSerializer(data=request.data)
         if not serializer.is_valid():

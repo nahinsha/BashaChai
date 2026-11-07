@@ -102,9 +102,14 @@ def api_exception_handler(exc, context):
             "message": "An unexpected error occurred.",
         }
     elif response.status_code == status.HTTP_429_TOO_MANY_REQUESTS:
+        is_auth_throttle = getattr(context.get("view"), "auth_throttle_scope", None)
         body = {
             "code": "throttled",
-            "message": "Too many messages in a short time. Please wait before sending another message.",
+            "message": (
+                "Too many requests in a short time. Please wait before trying again."
+                if is_auth_throttle
+                else "Too many messages in a short time. Please wait before sending another message."
+            ),
         }
     else:
         body = {

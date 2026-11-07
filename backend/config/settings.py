@@ -278,6 +278,15 @@ REST_FRAMEWORK = {
     },
 }
 
+AUTH_THROTTLE_RATES = {
+    "auth_login_ip": (60, 15 * 60),
+    "auth_login_email": (5, 15 * 60),
+    "auth_register_ip": (10, 60 * 60),
+    "auth_register_email": (3, 60 * 60),
+    "auth_password_reset_ip": (20, 60 * 60),
+    "auth_password_reset_email": (3, 60 * 60),
+}
+
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(
         minutes=int(os.environ.get("JWT_ACCESS_LIFETIME_MINUTES", "30"))

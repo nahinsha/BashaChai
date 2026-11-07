@@ -108,3 +108,13 @@ class RoleMembership(models.Model):
 
     def __str__(self):
         return f"{self.user.email}: {self.get_role_display()}"
+
+
+class AuthRateLimitBucket(models.Model):
+    key = models.CharField(max_length=64, primary_key=True)
+    window_started_at = models.DateTimeField()
+    expires_at = models.DateTimeField(db_index=True)
+    count = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        db_table = "auth_rate_limit_buckets"

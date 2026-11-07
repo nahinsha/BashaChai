@@ -228,6 +228,74 @@ class SessionAndProfileTests(APITestCase):
         self.assertEqual(response.data["email"], "owner@example.com")
 
 
+@override_settings(
+    AUTH_THROTTLE_RATES={
+        "auth_login_ip": (100, 3600),
+        "auth_login_email": (1, 3600),
+        "auth_register_ip": (1, 3600),
+        "auth_register_email": (10, 3600),
+        "auth_password_reset_ip": (1, 3600),
+        "auth_password_reset_email": (10, 3600),
+    }
+)
+class AuthRateLimitTests(APITestCase):
+    def assert_throttled(self, response):
+        self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
+        self.assertEqual(response.data["error"]["code"], "throttled")
+        self.assertEqual(
+            response.data["error"]["message"],
+            "Too many requests in a short time. Please wait before trying again.",
+        )
+
+    def test_login_is_limited_by_email_even_when_client_ip_changes(self):
+        first = self.client.post(
+            "/api/v1/auth/login/",
+            {"email": "limited@example.com", "password": "wrong"},
+            format="json",
+        )
+        second = self.client.post(
+            "/api/v1/auth/login/",
+            {"email": "LIMITED@example.com", "password": "wrong"},
+            format="json",
+            REMOTE_ADDR="192.0.2.4",
+        )
+
+        self.assertEqual(first.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assert_throttled(second)
+
+    def test_registration_is_limited_by_client_ip(self):
+        payload = {
+            "email": "first@example.com",
+            "password": "A-strong-random-password-42!",
+            "full_name": "First Account",
+            "roles": [RoleMembership.Role.HOME_SEEKER],
+        }
+        first = self.client.post("/api/v1/auth/register/", payload, format="json")
+        payload["email"] = "second@example.com"
+        second = self.client.post("/api/v1/auth/register/", payload, format="json")
+
+        self.assertEqual(first.status_code, status.HTTP_201_CREATED)
+        self.assert_throttled(second)
+
+    def test_password_reset_is_limited_by_client_ip(self):
+        first = self.client.post(
+            "/api/v1/auth/password-reset/",
+            {"email": "first@example.com"},
+            format="json",
+        )
+        second = self.client.post(
+            "/api/v1/auth/password-reset/",
+            {"email": "second@example.com"},
+            format="json",
+        )
+
+        self.assertEqual(first.status_code, status.HTTP_202_ACCEPTED)
+        self.assertEqual(
+            first.data["message"],
+            "If an account exists for that email, password recovery instructions will be sent.",
+        )
+        self.assert_throttled(second)
+
 class ProfilePictureAPITests(APITransactionTestCase):
     def setUp(self):
         self.media_dir = TemporaryDirectory()
@@ -418,6 +486,13 @@ class PasswordRecoveryTests(APITestCase):
 
     @override_settings(EMAIL_BACKEND="django.core.mail.backends.locmem.EmailBackend")
     def test_valid_token_changes_password_and_cannot_be_reused(self):
+        login = self.client.post(
+            "/api/v1/auth/login/",
+            {"email": self.user.email, "password": "A-strong-random-password-42!"},
+            format="json",
+        )
+        old_refresh = login.data["refresh"]
+        old_access = login.data["access"]
         self.request_reset()
         token = self.reset_token_from_email()
 
@@ -439,6 +514,16 @@ class PasswordRecoveryTests(APITestCase):
         self.assertFalse(self.user.check_password("A-strong-random-password-42!"))
         self.assertEqual(reused.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(reused.data["error"]["code"], "invalid_token")
+
+        revoked_refresh = self.client.post(
+            "/api/v1/auth/token/refresh/", {"refresh": old_refresh}, format="json"
+        )
+        self.assertEqual(revoked_refresh.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(revoked_refresh.data["error"]["code"], "invalid_token")
+
+        self.client.credentials(HTTP_AUTHORIZATION=f"Bearer {old_access}")
+        existing_access = self.client.get("/api/v1/me/")
+        self.assertEqual(existing_access.status_code, status.HTTP_200_OK)
 
     def test_invalid_and_expired_tokens_are_rejected(self):
         invalid = self.client.post(
