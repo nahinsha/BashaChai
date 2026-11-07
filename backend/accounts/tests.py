@@ -103,6 +103,8 @@ class RegistrationTests(APITestCase):
 
 
 class SessionAndProfileTests(APITestCase):
+    refresh_cookie_name = "basachai_refresh"
+
     def setUp(self):
         self.user = User.objects.create_user(
             email="owner@example.com",
@@ -111,7 +113,8 @@ class SessionAndProfileTests(APITestCase):
             roles=[RoleMembership.Role.PROPERTY_OWNER],
         )
 
-    def test_login_returns_email_identity_and_token_pair(self):
+    @override_settings(JWT_REFRESH_COOKIE_SECURE=True, JWT_REFRESH_COOKIE_SAMESITE="None")
+    def test_login_returns_access_token_and_sets_http_only_refresh_cookie(self):
         response = self.client.post(
             "/api/v1/auth/login/",
             {"email": "OWNER@example.com", "password": "A-strong-random-password-42!"},
@@ -120,7 +123,11 @@ class SessionAndProfileTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIn("access", response.data)
-        self.assertIn("refresh", response.data)
+        self.assertNotIn("refresh", response.data)
+        self.assertIn(self.refresh_cookie_name, response.cookies)
+        self.assertTrue(response.cookies[self.refresh_cookie_name]["httponly"])
+        self.assertTrue(response.cookies[self.refresh_cookie_name]["secure"])
+        self.assertEqual(response.cookies[self.refresh_cookie_name]["samesite"], "None")
         self.assertEqual(response.data["user"]["roles"], [RoleMembership.Role.PROPERTY_OWNER])
 
     def test_login_uses_a_generic_failure(self):
@@ -140,20 +147,42 @@ class SessionAndProfileTests(APITestCase):
             {"email": "owner@example.com", "password": "A-strong-random-password-42!"},
             format="json",
         )
-        old_refresh = login.data["refresh"]
+        old_refresh = login.cookies[self.refresh_cookie_name].value
 
-        refreshed = self.client.post(
-            "/api/v1/auth/token/refresh/", {"refresh": old_refresh}, format="json"
-        )
-        reused = self.client.post(
-            "/api/v1/auth/token/refresh/", {"refresh": old_refresh}, format="json"
-        )
+        refreshed = self.client.post("/api/v1/auth/token/refresh/", {}, format="json")
+        rotated_refresh = refreshed.cookies[self.refresh_cookie_name].value
+        self.client.cookies[self.refresh_cookie_name] = old_refresh
+        reused = self.client.post("/api/v1/auth/token/refresh/", {}, format="json")
 
         self.assertEqual(refreshed.status_code, status.HTTP_200_OK)
         self.assertIn("access", refreshed.data)
-        self.assertNotEqual(refreshed.data["refresh"], old_refresh)
+        self.assertNotIn("refresh", refreshed.data)
+        self.assertNotEqual(rotated_refresh, old_refresh)
         self.assertEqual(reused.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(reused.data["error"]["code"], "invalid_token")
+
+    def test_refresh_and_logout_reject_body_refresh_tokens(self):
+        login = self.client.post(
+            "/api/v1/auth/login/",
+            {"email": "owner@example.com", "password": "A-strong-random-password-42!"},
+            format="json",
+        )
+        old_refresh = login.cookies[self.refresh_cookie_name].value
+        self.client.cookies.pop(self.refresh_cookie_name)
+
+        body_refresh = self.client.post(
+            "/api/v1/auth/token/refresh/", {"refresh": old_refresh}, format="json"
+        )
+        body_logout = self.client.post(
+            "/api/v1/auth/logout/", {"refresh": old_refresh}, format="json"
+        )
+
+        self.assertEqual(body_refresh.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(body_logout.status_code, status.HTTP_400_BAD_REQUEST)
+        self.client.cookies[self.refresh_cookie_name] = old_refresh
+        cookie_refresh = self.client.post("/api/v1/auth/token/refresh/", {}, format="json")
+        self.assertEqual(cookie_refresh.status_code, status.HTTP_200_OK)
+        self.assertNotIn("refresh", cookie_refresh.data)
 
     def test_logout_blacklists_refresh_without_access_authentication(self):
         login = self.client.post(
@@ -161,18 +190,94 @@ class SessionAndProfileTests(APITestCase):
             {"email": "owner@example.com", "password": "A-strong-random-password-42!"},
             format="json",
         )
-        refresh = login.data["refresh"]
+        refresh = login.cookies[self.refresh_cookie_name].value
 
-        logout = self.client.post(
-            "/api/v1/auth/logout/", {"refresh": refresh}, format="json"
-        )
+        logout = self.client.post("/api/v1/auth/logout/", {}, format="json")
+        self.client.cookies[self.refresh_cookie_name] = refresh
         refresh_after_logout = self.client.post(
-            "/api/v1/auth/token/refresh/", {"refresh": refresh}, format="json"
+            "/api/v1/auth/token/refresh/", {}, format="json"
         )
 
         self.assertEqual(logout.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(logout.cookies[self.refresh_cookie_name]["max-age"], "0")
         self.assertEqual(refresh_after_logout.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(refresh_after_logout.data["error"]["code"], "invalid_token")
+
+    @override_settings(
+        CSRF_TRUSTED_ORIGINS=["https://frontend.example"],
+        CORS_ALLOWED_ORIGINS=["https://frontend.example"],
+    )
+    def test_login_refresh_and_logout_require_csrf_tokens(self):
+        client = APIClient(enforce_csrf_checks=True)
+        login_payload = {
+            "email": "owner@example.com",
+            "password": "A-strong-random-password-42!",
+        }
+        denied = client.post("/api/v1/auth/login/", login_payload, format="json")
+        self.assertEqual(denied.status_code, status.HTTP_403_FORBIDDEN)
+
+        csrf = client.get("/api/v1/auth/csrf/")
+        csrf_token = csrf.data["csrfToken"]
+        self.assertTrue(csrf.cookies["csrftoken"]["httponly"])
+        headers = {
+            "HTTP_X_CSRFTOKEN": csrf_token,
+            "HTTP_ORIGIN": "https://frontend.example",
+        }
+        login = client.post(
+            "/api/v1/auth/login/", login_payload, format="json", **headers
+        )
+        self.assertEqual(login.status_code, status.HTTP_200_OK)
+
+        denied_refresh = client.post(
+            "/api/v1/auth/token/refresh/",
+            {},
+            format="json",
+            HTTP_ORIGIN="https://frontend.example",
+        )
+        self.assertEqual(denied_refresh.status_code, status.HTTP_403_FORBIDDEN)
+        untrusted_origin = client.post(
+            "/api/v1/auth/token/refresh/",
+            {},
+            format="json",
+            HTTP_ORIGIN="https://attacker.example",
+            HTTP_X_CSRFTOKEN=csrf_token,
+        )
+        self.assertEqual(untrusted_origin.status_code, status.HTTP_403_FORBIDDEN)
+        refreshed = client.post(
+            "/api/v1/auth/token/refresh/", {}, format="json", **headers
+        )
+        self.assertEqual(refreshed.status_code, status.HTTP_200_OK)
+
+        denied_logout = client.post(
+            "/api/v1/auth/logout/",
+            {},
+            format="json",
+            HTTP_ORIGIN="https://frontend.example",
+        )
+        self.assertEqual(denied_logout.status_code, status.HTTP_403_FORBIDDEN)
+        logout = client.post("/api/v1/auth/logout/", {}, format="json", **headers)
+        self.assertEqual(logout.status_code, status.HTTP_204_NO_CONTENT)
+
+    @override_settings(
+        CORS_ALLOWED_ORIGINS=["https://frontend.example"],
+        CORS_ALLOW_CREDENTIALS=True,
+    )
+    def test_cors_preflight_allows_cookie_auth_headers_for_configured_origin(self):
+        response = APIClient().options(
+            "/api/v1/auth/token/refresh/",
+            HTTP_ORIGIN="https://frontend.example",
+            HTTP_ACCESS_CONTROL_REQUEST_METHOD="POST",
+            HTTP_ACCESS_CONTROL_REQUEST_HEADERS="authorization,content-type,x-csrftoken",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response["Access-Control-Allow-Origin"], "https://frontend.example"
+        )
+        self.assertEqual(response["Access-Control-Allow-Credentials"], "true")
+        allowed_headers = response["Access-Control-Allow-Headers"].lower()
+        self.assertIn("authorization", allowed_headers)
+        self.assertIn("x-csrftoken", allowed_headers)
 
     def test_me_requires_authentication_and_adds_only_a_public_role(self):
         anonymous = self.client.get("/api/v1/me/")
@@ -457,7 +562,7 @@ class PasswordRecoveryTests(APITestCase):
         reset_url = next(
             line for line in mail.outbox[-1].body.splitlines() if line.startswith("http")
         )
-        return parse_qs(urlparse(reset_url).query)["token"][0]
+        return parse_qs(urlparse(reset_url).fragment)["token"][0]
 
     @override_settings(
         EMAIL_BACKEND="django.core.mail.backends.locmem.EmailBackend",
@@ -481,6 +586,8 @@ class PasswordRecoveryTests(APITestCase):
         self.assertEqual(urlparse(reset_url).scheme, "https")
         self.assertEqual(urlparse(reset_url).netloc, "basachai.example")
         self.assertEqual(urlparse(reset_url).path, "/reset-password")
+        self.assertEqual(urlparse(reset_url).query, "")
+        self.assertIn("token=", urlparse(reset_url).fragment)
         self.assertNotIn("recover@example.com", reset_url)
         self.assertEqual(User.objects.count(), 1)
 
@@ -491,7 +598,7 @@ class PasswordRecoveryTests(APITestCase):
             {"email": self.user.email, "password": "A-strong-random-password-42!"},
             format="json",
         )
-        old_refresh = login.data["refresh"]
+        old_refresh = login.cookies["basachai_refresh"].value
         old_access = login.data["access"]
         self.request_reset()
         token = self.reset_token_from_email()
@@ -509,15 +616,15 @@ class PasswordRecoveryTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(response.content, b"")
+        self.assertEqual(response.cookies["basachai_refresh"]["max-age"], "0")
         self.user.refresh_from_db()
         self.assertTrue(self.user.check_password("A-different-password-87!"))
         self.assertFalse(self.user.check_password("A-strong-random-password-42!"))
         self.assertEqual(reused.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(reused.data["error"]["code"], "invalid_token")
 
-        revoked_refresh = self.client.post(
-            "/api/v1/auth/token/refresh/", {"refresh": old_refresh}, format="json"
-        )
+        self.client.cookies["basachai_refresh"] = old_refresh
+        revoked_refresh = self.client.post("/api/v1/auth/token/refresh/", {}, format="json")
         self.assertEqual(revoked_refresh.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEqual(revoked_refresh.data["error"]["code"], "invalid_token")
 
@@ -941,6 +1048,7 @@ class PasswordResetConfigurationTests(SimpleTestCase):
 
     def _load_settings(self, extra_env=None):
         env = os.environ.copy()
+        env.pop("BASACHAI_ENV", None)
         if extra_env:
             for key, val in extra_env.items():
                 if val is None:
@@ -949,6 +1057,35 @@ class PasswordResetConfigurationTests(SimpleTestCase):
                     env[key] = val
         with patch.dict(os.environ, env, clear=True):
             return runpy.run_path(str(self.settings_path))
+
+    def test_local_dotenv_load_requires_explicit_development_opt_in(self):
+        with patch("dotenv.load_dotenv") as load_dotenv:
+            self._load_settings(
+                {"BASACHAI_ENV": "development", "DJANGO_DEBUG": "true"}
+            )
+
+        load_dotenv.assert_called_once_with(
+            self.settings_path.parent.parent / ".env", override=False
+        )
+
+    def test_dotenv_is_not_loaded_without_development_opt_in(self):
+        with patch("dotenv.load_dotenv") as load_dotenv:
+            self._load_settings({"DJANGO_DEBUG": "true"})
+
+        load_dotenv.assert_not_called()
+
+    def test_production_still_requires_an_explicit_secret_key(self):
+        with patch("dotenv.load_dotenv") as load_dotenv:
+            with self.assertRaises(ImproperlyConfigured) as ctx:
+                self._load_settings(
+                    {"DJANGO_DEBUG": "false", "DJANGO_SECRET_KEY": None}
+                )
+
+        self.assertIn(
+            "DJANGO_SECRET_KEY must be configured when DEBUG is false.",
+            str(ctx.exception),
+        )
+        load_dotenv.assert_not_called()
 
     def test_default_url_in_debug_mode(self):
         env = self._load_settings(
@@ -965,12 +1102,65 @@ class PasswordResetConfigurationTests(SimpleTestCase):
         )
         self.assertEqual(env["PASSWORD_RESET_FRONTEND_URL"], "http://localhost:3000")
 
+    def test_smtp_settings_can_be_configured_from_environment(self):
+        env = self._load_settings(
+            {
+                "DJANGO_DEBUG": "true",
+                "EMAIL_HOST": "smtp.example.invalid",
+                "EMAIL_PORT": "587",
+                "EMAIL_HOST_USER": "mailer",
+                "EMAIL_USE_TLS": "true",
+                "EMAIL_USE_SSL": "false",
+                "DEFAULT_FROM_EMAIL": "BasaChai <noreply@example.invalid>",
+            }
+        )
+
+        self.assertEqual(env["EMAIL_HOST"], "smtp.example.invalid")
+        self.assertEqual(env["EMAIL_PORT"], 587)
+        self.assertEqual(env["EMAIL_HOST_USER"], "mailer")
+        self.assertTrue(env["EMAIL_USE_TLS"])
+        self.assertFalse(env["EMAIL_USE_SSL"])
+        self.assertEqual(env["DEFAULT_FROM_EMAIL"], "BasaChai <noreply@example.invalid>")
+
+    def test_smtp_tls_modes_cannot_be_enabled_together(self):
+        with self.assertRaises(ImproperlyConfigured):
+            self._load_settings(
+                {
+                    "DJANGO_DEBUG": "true",
+                    "EMAIL_USE_TLS": "true",
+                    "EMAIL_USE_SSL": "true",
+                }
+            )
+
+    def test_production_cookie_and_origin_defaults(self):
+        env = self._load_settings(
+            {
+                "DJANGO_DEBUG": "false",
+                "DJANGO_SECRET_KEY": "test-only-not-a-production-secret",
+                "SUPABASE_S3_ACCESS_KEY_ID": "test-access-key",
+                "SUPABASE_S3_SECRET_ACCESS_KEY": "test-secret-key",
+                "SUPABASE_S3_ENDPOINT_URL": "https://storage.example.invalid",
+                "PASSWORD_RESET_FRONTEND_URL": "https://frontend.example",
+                "CORS_ALLOWED_ORIGINS": "https://frontend.example",
+            }
+        )
+
+        self.assertTrue(env["CORS_ALLOW_CREDENTIALS"])
+        self.assertEqual(env["CSRF_TRUSTED_ORIGINS"], ["https://frontend.example"])
+        self.assertTrue(env["JWT_REFRESH_COOKIE_SECURE"])
+        self.assertEqual(env["JWT_REFRESH_COOKIE_SAMESITE"], "None")
+        self.assertTrue(env["CSRF_COOKIE_SECURE"])
+        self.assertTrue(env["CSRF_COOKIE_HTTPONLY"])
+
     def test_production_mode_requires_password_reset_frontend_url(self):
         with self.assertRaises(ImproperlyConfigured) as ctx:
             self._load_settings(
                 {
                     "DJANGO_DEBUG": "false",
                     "DJANGO_SECRET_KEY": "test-production-secret-key",
+                    "SUPABASE_S3_ACCESS_KEY_ID": "test-access-key",
+                    "SUPABASE_S3_SECRET_ACCESS_KEY": "test-secret-key",
+                    "SUPABASE_S3_ENDPOINT_URL": "https://storage.example.invalid",
                     "PASSWORD_RESET_FRONTEND_URL": None,
                 }
             )
@@ -985,6 +1175,9 @@ class PasswordResetConfigurationTests(SimpleTestCase):
                 {
                     "DJANGO_DEBUG": "false",
                     "DJANGO_SECRET_KEY": "test-production-secret-key",
+                    "SUPABASE_S3_ACCESS_KEY_ID": "test-access-key",
+                    "SUPABASE_S3_SECRET_ACCESS_KEY": "test-secret-key",
+                    "SUPABASE_S3_ENDPOINT_URL": "https://storage.example.invalid",
                     "PASSWORD_RESET_FRONTEND_URL": "   ",
                 }
             )
@@ -998,6 +1191,9 @@ class PasswordResetConfigurationTests(SimpleTestCase):
             {
                 "DJANGO_DEBUG": "false",
                 "DJANGO_SECRET_KEY": "test-production-secret-key",
+                "SUPABASE_S3_ACCESS_KEY_ID": "test-access-key",
+                "SUPABASE_S3_SECRET_ACCESS_KEY": "test-secret-key",
+                "SUPABASE_S3_ENDPOINT_URL": "https://storage.example.invalid",
                 "PASSWORD_RESET_FRONTEND_URL": "https://basachai.com",
             }
         )

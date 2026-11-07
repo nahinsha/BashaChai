@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { confirmPasswordReset } from '../api.js'
 import './PasswordRecoveryPages.css'
 
@@ -9,9 +9,24 @@ function passwordError(error) {
   return typeof value === 'string' ? value : ''
 }
 
+function consumeResetToken() {
+  const url = new URL(window.location.href)
+  const token = new URLSearchParams(url.hash.slice(1)).get('token')
+    || url.searchParams.get('token')
+    || ''
+  if (token) {
+    url.searchParams.delete('token')
+    url.hash = ''
+    window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}`)
+  }
+  return token
+}
+
+// Consume the one-time fragment before React renders or starts any requests.
+const INITIAL_RESET_TOKEN = consumeResetToken()
+
 export default function ResetPasswordPage() {
-  const [searchParams] = useSearchParams()
-  const token = searchParams.get('token') || ''
+  const [token] = useState(INITIAL_RESET_TOKEN)
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [submitting, setSubmitting] = useState(false)

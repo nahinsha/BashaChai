@@ -2,13 +2,12 @@ import { useCallback, useEffect, useState } from 'react'
 import { AuthContext } from './AuthContextValue.js'
 import {
   getCurrentUser,
-  hasStoredSession,
   login as loginRequest,
   logout as logoutRequest,
 } from '../api.js'
 
 export function AuthProvider({ children }) {
-  const [status, setStatus] = useState(() => hasStoredSession() ? 'checking' : 'anonymous')
+  const [status, setStatus] = useState('checking')
   const [user, setUser] = useState(null)
   const [sessionExpired, setSessionExpired] = useState(false)
 
@@ -22,20 +21,18 @@ export function AuthProvider({ children }) {
     }
 
     window.addEventListener('basachai:session-expired', handleExpired)
-    if (hasStoredSession()) {
-      getCurrentUser()
-        .then((currentUser) => {
-          if (!active) return
-          setUser(currentUser)
-          setStatus('authenticated')
-          setSessionExpired(false)
-        })
-        .catch(() => {
-          if (!active) return
-          setUser(null)
-          setStatus('anonymous')
-        })
-    }
+    getCurrentUser()
+      .then((currentUser) => {
+        if (!active) return
+        setUser(currentUser)
+        setStatus('authenticated')
+        setSessionExpired(false)
+      })
+      .catch(() => {
+        if (!active) return
+        setUser(null)
+        setStatus('anonymous')
+      })
 
     return () => {
       active = false

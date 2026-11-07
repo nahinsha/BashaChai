@@ -124,10 +124,10 @@ def send_password_reset_email(user):
         salt=PASSWORD_RESET_SALT,
         compress=True,
     )
-    query = urlencode({"token": token})
+    fragment = urlencode({"token": token})
     reset_url = (
         f"{settings.PASSWORD_RESET_FRONTEND_URL.rstrip('/')}"
-        f"/reset-password?{query}"
+        f"/reset-password#{fragment}"
     )
     send_mail(
         subject="Reset your BasaChai password",

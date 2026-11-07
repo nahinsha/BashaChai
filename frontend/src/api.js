@@ -1,20 +1,44 @@
 const API_ROOT = import.meta.env.VITE_API_ROOT || "/api/v1";
-const TOKEN_KEY = "basachai.auth.tokens";
+const LEGACY_TOKEN_KEY = "basachai.auth.tokens";
+let accessToken = null;
+let csrfToken = null;
+let refreshInFlight = null;
 
-function readTokens() {
+function discardLegacyTokens() {
   try {
-    return JSON.parse(localStorage.getItem(TOKEN_KEY) || "null");
+    localStorage.removeItem(LEGACY_TOKEN_KEY);
   } catch {
-    return null;
+    // Authentication remains memory-only when browser storage is unavailable.
   }
 }
 
-function writeTokens(tokens) {
-  localStorage.setItem(TOKEN_KEY, JSON.stringify(tokens));
+discardLegacyTokens();
+
+function readAccessToken() {
+  return accessToken;
+}
+
+function writeAccessToken(token) {
+  accessToken = token || null;
 }
 
 export function clearTokens() {
-  localStorage.removeItem(TOKEN_KEY);
+  accessToken = null;
+  discardLegacyTokens();
+}
+
+async function ensureCsrfToken() {
+  if (csrfToken) return csrfToken;
+  const response = await fetch(`${API_ROOT}/auth/csrf/`, {
+    headers: { Accept: "application/json" },
+    credentials: "include",
+  });
+  const data = await response.json();
+  if (!response.ok || !data?.csrfToken) {
+    throw new Error("The security token could not be initialized. Please try again.");
+  }
+  csrfToken = data.csrfToken;
+  return csrfToken;
 }
 
 export function resolveApiUrl(path) {
@@ -28,10 +52,14 @@ async function send(path, { method = "GET", body, accessToken } = {}) {
   const isFormData = typeof FormData !== "undefined" && body instanceof FormData;
   if (body !== undefined && !isFormData) headers["Content-Type"] = "application/json";
   if (accessToken) headers.Authorization = `Bearer ${accessToken}`;
+  if (csrfToken && !["GET", "HEAD", "OPTIONS", "TRACE"].includes(method.toUpperCase())) {
+    headers["X-CSRFToken"] = csrfToken;
+  }
 
   const response = await fetch(`${API_ROOT}${path}`, {
     method,
     headers,
+    credentials: "include",
     body: body === undefined ? undefined : isFormData ? body : JSON.stringify(body),
   });
   const text = response.status === 204 ? "" : await response.text();
@@ -54,39 +82,48 @@ function throwApiError(data, response) {
   throw error;
 }
 
-async function refreshTokens(tokens) {
-  const { response, data, hasBody } = await send("/auth/token/refresh/", {
-    method: "POST",
-    body: { refresh: tokens.refresh },
-  });
-  if (!response.ok) {
+async function refreshTokens() {
+  if (refreshInFlight) return refreshInFlight;
+  refreshInFlight = (async () => {
+    await ensureCsrfToken();
+    const { response, data, hasBody } = await send("/auth/token/refresh/", {
+      method: "POST",
+      body: {},
+    });
+    if (!response.ok) {
+      if (!hasBody) throwEmptyResponseError(response);
+      throwApiError(data, response);
+    }
     if (!hasBody) throwEmptyResponseError(response);
-    throwApiError(data, response);
+    writeAccessToken(data.access);
+    return data.access;
+  })();
+  try {
+    return await refreshInFlight;
+  } finally {
+    refreshInFlight = null;
   }
-  if (response.status !== 204 && !hasBody) throwEmptyResponseError(response);
-  const next = { access: data.access, refresh: data.refresh };
-  writeTokens(next);
-  return next;
 }
 
 export async function apiRequest(path, options = {}) {
   const { auth = false, ...requestOptions } = options;
-  let tokens = auth ? readTokens() : null;
+  let currentAccessToken = auth ? readAccessToken() : null;
   let { response, data, hasBody } = await send(path, {
     ...requestOptions,
-    accessToken: tokens?.access,
+    accessToken: currentAccessToken,
   });
 
-  if (auth && response.status === 401 && tokens?.refresh) {
+  if (auth && response.status === 401) {
     try {
-      tokens = await refreshTokens(tokens);
+      currentAccessToken = await refreshTokens();
       ({ response, data, hasBody } = await send(path, {
         ...requestOptions,
-        accessToken: tokens.access,
+        accessToken: currentAccessToken,
       }));
     } catch {
+      const hadAccessToken = Boolean(currentAccessToken);
       clearTokens();
-      window.dispatchEvent(new Event("basachai:session-expired"));
+      if (hadAccessToken) window.dispatchEvent(new Event("basachai:session-expired"));
       throw new Error("Your session has expired. Please sign in again.");
     }
   }
@@ -100,22 +137,24 @@ export async function apiRequest(path, options = {}) {
 }
 
 async function fetchAuthenticatedBlob(path, unavailableLabel, signInMessage) {
-  let tokens = readTokens();
-  if (!tokens?.access) throw new Error(signInMessage);
+  let currentAccessToken = readAccessToken();
+  if (!currentAccessToken) throw new Error(signInMessage);
 
   const fileUrl = resolveApiUrl(path);
-  const requestFile = (accessToken) => fetch(fileUrl, {
-    headers: { Authorization: `Bearer ${accessToken}` },
+  const requestFile = (token) => fetch(fileUrl, {
+    headers: { Authorization: `Bearer ${token}` },
+    credentials: "include",
   });
 
-  let response = await requestFile(tokens.access);
-  if (response.status === 401 && tokens.refresh) {
+  let response = await requestFile(currentAccessToken);
+  if (response.status === 401) {
     try {
-      tokens = await refreshTokens(tokens);
-      response = await requestFile(tokens.access);
+      currentAccessToken = await refreshTokens();
+      response = await requestFile(currentAccessToken);
     } catch {
+      const hadAccessToken = Boolean(currentAccessToken);
       clearTokens();
-      window.dispatchEvent(new Event("basachai:session-expired"));
+      if (hadAccessToken) window.dispatchEvent(new Event("basachai:session-expired"));
       throw new Error("Your session has expired. Please sign in again.");
     }
   }
@@ -145,11 +184,12 @@ export async function registerAccount(payload) {
 }
 
 export async function login(email, password) {
+  await ensureCsrfToken();
   const data = await apiRequest("/auth/login/", {
     method: "POST",
     body: { email, password },
   });
-  writeTokens({ access: data.access, refresh: data.refresh });
+  writeAccessToken(data.access);
   return data.user;
 }
 
@@ -160,11 +200,15 @@ export function requestPasswordReset(email) {
   });
 }
 
-export function confirmPasswordReset(token, newPassword) {
-  return apiRequest("/auth/password-reset/confirm/", {
+export async function confirmPasswordReset(token, newPassword) {
+  const data = await apiRequest("/auth/password-reset/confirm/", {
     method: "POST",
     body: { token, new_password: newPassword },
   });
+  const hadAccessToken = Boolean(readAccessToken());
+  clearTokens();
+  if (hadAccessToken) window.dispatchEvent(new Event("basachai:session-expired"));
+  return data;
 }
 
 export function getCurrentUser() {
@@ -178,19 +222,17 @@ export function getShortlistComparison(listingIds) {
 }
 
 export async function logout() {
-  const tokens = readTokens();
   try {
-    if (tokens?.refresh) {
-      await apiRequest("/auth/logout/", {
-        method: "POST",
-        body: { refresh: tokens.refresh },
-      });
+    await ensureCsrfToken();
+    const { response, data, hasBody } = await send("/auth/logout/", {
+      method: "POST",
+      body: {},
+    });
+    if (!response.ok) {
+      if (!hasBody) throwEmptyResponseError(response);
+      throwApiError(data, response);
     }
   } finally {
     clearTokens();
   }
-}
-
-export function hasStoredSession() {
-  return Boolean(readTokens()?.refresh);
 }

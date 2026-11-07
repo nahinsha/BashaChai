@@ -1,9 +1,12 @@
 import logging
 import mimetypes
 
-from django.contrib.auth import authenticate
-from django.contrib.auth import get_user_model
+from django.conf import settings
+from django.contrib.auth import authenticate, get_user_model
+from django.middleware.csrf import get_token
 from django.http import FileResponse, Http404
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
 from rest_framework import status
 from rest_framework.exceptions import APIException, AuthenticationFailed
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -95,6 +98,7 @@ class RegisterView(PublicAPIView):
         )
 
 
+@method_decorator(csrf_protect, name="dispatch")
 class LoginView(PublicAPIView):
     auth_throttle_scope = "auth_login"
 
@@ -121,19 +125,64 @@ class LoginView(PublicAPIView):
             )
 
         refresh = RefreshToken.for_user(user)
-        return Response(
+        response = Response(
             {
                 "access": str(refresh.access_token),
-                "refresh": str(refresh),
                 "user": CurrentUserSerializer(user).data,
             },
             status=status.HTTP_200_OK,
         )
+        response["Cache-Control"] = "no-store"
+        _set_refresh_cookie(response, str(refresh))
+        return response
 
 
+@method_decorator(ensure_csrf_cookie, name="dispatch")
+class CsrfTokenView(PublicAPIView):
+    def get(self, request):
+        response = Response({"csrfToken": get_token(request)})
+        response["Cache-Control"] = "no-store"
+        return response
+
+
+def _set_refresh_cookie(response, token):
+    from rest_framework_simplejwt.settings import api_settings
+
+    response.set_cookie(
+        settings.JWT_REFRESH_COOKIE_NAME,
+        token,
+        max_age=int(api_settings.REFRESH_TOKEN_LIFETIME.total_seconds()),
+        httponly=True,
+        secure=settings.JWT_REFRESH_COOKIE_SECURE,
+        samesite=settings.JWT_REFRESH_COOKIE_SAMESITE,
+        path="/api/v1/auth/",
+    )
+
+
+def _clear_refresh_cookie(response):
+    response.set_cookie(
+        settings.JWT_REFRESH_COOKIE_NAME,
+        "",
+        max_age=0,
+        expires="Thu, 01 Jan 1970 00:00:00 GMT",
+        path="/api/v1/auth/",
+        secure=settings.JWT_REFRESH_COOKIE_SECURE,
+        httponly=True,
+        samesite=settings.JWT_REFRESH_COOKIE_SAMESITE,
+    )
+
+
+@method_decorator(csrf_protect, name="dispatch")
 class RefreshView(PublicAPIView):
     def post(self, request):
-        input_serializer = RefreshTokenInputSerializer(data=request.data)
+        if hasattr(request.data, "keys") and "refresh" in request.data:
+            return validation_error(
+                {"refresh": ["Refresh tokens must be sent through the secure cookie."]}
+            )
+        cookie_token = request.COOKIES.get(settings.JWT_REFRESH_COOKIE_NAME)
+        input_serializer = RefreshTokenInputSerializer(
+            data={"refresh": cookie_token}
+        )
         if not input_serializer.is_valid():
             return validation_error(input_serializer.errors)
 
@@ -149,21 +198,33 @@ class RefreshView(PublicAPIView):
         except User.DoesNotExist as error:
             raise invalid_token() from error
 
-        return Response(serializer.validated_data, status=status.HTTP_200_OK)
+        response_data = dict(serializer.validated_data)
+        rotated_refresh = response_data.pop("refresh", None)
+        response = Response(response_data, status=status.HTTP_200_OK)
+        response["Cache-Control"] = "no-store"
+        if rotated_refresh:
+            _set_refresh_cookie(response, rotated_refresh)
+        return response
 
 
+@method_decorator(csrf_protect, name="dispatch")
 class LogoutView(PublicAPIView):
     def post(self, request):
-        serializer = RefreshTokenInputSerializer(data=request.data)
-        if not serializer.is_valid():
-            return validation_error(serializer.errors)
+        if hasattr(request.data, "keys") and "refresh" in request.data:
+            return validation_error(
+                {"refresh": ["Refresh tokens must be sent through the secure cookie."]}
+            )
+        refresh_token = request.COOKIES.get(settings.JWT_REFRESH_COOKIE_NAME)
+        if refresh_token:
+            try:
+                RefreshToken(refresh_token).blacklist()
+            except TokenError as error:
+                raise invalid_token() from error
 
-        try:
-            RefreshToken(serializer.validated_data["refresh"]).blacklist()
-        except TokenError as error:
-            raise invalid_token() from error
-
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        response = Response(status=status.HTTP_204_NO_CONTENT)
+        response["Cache-Control"] = "no-store"
+        _clear_refresh_cookie(response)
+        return response
 
 
 class PasswordResetRequestView(PublicAPIView):
@@ -204,7 +265,10 @@ class PasswordResetConfirmView(PublicAPIView):
             serializer.validated_data["token"],
             serializer.validated_data["new_password"],
         )
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        response = Response(status=status.HTTP_204_NO_CONTENT)
+        response["Cache-Control"] = "no-store"
+        _clear_refresh_cookie(response)
+        return response
 
 
 class CurrentUserView(APIView):

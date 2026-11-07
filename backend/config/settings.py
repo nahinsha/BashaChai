@@ -5,9 +5,15 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 import dj_database_url
+from dotenv import load_dotenv
 from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load the ignored local env file only after an explicit development opt-in.
+# Existing shell/IDE environment values always take precedence.
+if os.environ.get("BASACHAI_ENV", "").strip().lower() == "development":
+    load_dotenv(BASE_DIR / ".env", override=False)
 
 
 def env_bool(name, default):
@@ -72,9 +78,23 @@ if any("*" in host for host in ALLOWED_HOSTS):
 
 CORS_ALLOWED_ORIGINS = env_origins("CORS_ALLOWED_ORIGINS")
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOW_CREDENTIALS = False
+CORS_ALLOW_CREDENTIALS = True
 CORS_URLS_REGEX = r"^/api/.*$"
-CSRF_TRUSTED_ORIGINS = env_origins("CSRF_TRUSTED_ORIGINS")
+CSRF_TRUSTED_ORIGINS = env_origins(
+    "CSRF_TRUSTED_ORIGINS", default=CORS_ALLOWED_ORIGINS
+)
+
+JWT_REFRESH_COOKIE_NAME = "basachai_refresh"
+JWT_REFRESH_COOKIE_SAMESITE = os.environ.get(
+    "JWT_REFRESH_COOKIE_SAMESITE", "Lax" if DEBUG else "None"
+).strip().capitalize()
+if JWT_REFRESH_COOKIE_SAMESITE not in {"Lax", "Strict", "None"}:
+    raise ImproperlyConfigured(
+        "JWT_REFRESH_COOKIE_SAMESITE must be Lax, Strict, or None."
+    )
+JWT_REFRESH_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SAMESITE = JWT_REFRESH_COOKIE_SAMESITE
+CSRF_COOKIE_HTTPONLY = True
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SESSION_COOKIE_SECURE = not DEBUG
@@ -254,6 +274,15 @@ EMAIL_BACKEND = os.environ.get(
     else "django.core.mail.backends.smtp.EmailBackend",
 )
 EMAIL_TIMEOUT = int(os.environ.get("EMAIL_TIMEOUT", "3"))
+EMAIL_HOST = os.environ.get("EMAIL_HOST", "localhost")
+EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "25"))
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", False)
+EMAIL_USE_SSL = env_bool("EMAIL_USE_SSL", False)
+if EMAIL_USE_TLS and EMAIL_USE_SSL:
+    raise ImproperlyConfigured("EMAIL_USE_TLS and EMAIL_USE_SSL cannot both be enabled.")
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "webmaster@localhost")
 PASSWORD_RESET_FRONTEND_URL = os.environ.get("PASSWORD_RESET_FRONTEND_URL")
 if PASSWORD_RESET_FRONTEND_URL:
     PASSWORD_RESET_FRONTEND_URL = PASSWORD_RESET_FRONTEND_URL.strip()
