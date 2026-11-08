@@ -38,6 +38,7 @@ Finding a suitable rental home can be time-consuming. People often need to brows
 BasaChai aims to simplify this process by bringing the essential house-hunting activities into one platform.
 
 **The core journey:**
+
 `Find` → `Evaluate` → `Shortlist` → `Compare` → `Communicate` → `Decide` → `Visit`
 
 The platform focuses on helping users make better-informed decisions before arranging physical visits.
@@ -55,12 +56,14 @@ BasaChai addresses these challenges by providing a centralized platform where se
 ## Key Features
 
 ### Property Discovery
+
 - Browse publicly available rental listings.
 - Search and filter properties using relevant criteria.
 - View detailed property information and images.
 - Explore listings without requiring an account.
 
 ### Home Seeker
+
 - Create an account and manage a personal profile.
 - Save preferred properties for later.
 - Compare up to three properties side by side.
@@ -70,6 +73,7 @@ BasaChai addresses these challenges by providing a centralized platform where se
 - Manage personal information and profile visibility.
 
 ### Property Owner
+
 - Create and manage rental listings.
 - Upload property images.
 - Manage listing publication and availability.
@@ -78,11 +82,13 @@ BasaChai addresses these challenges by providing a centralized platform where se
 - Manage owner profile information.
 
 ### Messaging and Communication
+
 - Property-related conversations between seekers and owners.
 - Support for message attachments.
 - Private storage and authenticated attachment downloads.
 
 ### Admin and Moderation
+
 - Admin dashboard and platform overview.
 - Manage users and property listings.
 - Review moderation reports and feedback.
@@ -106,13 +112,15 @@ BasaChai addresses these challenges by providing a centralized platform where se
 
 | Page | Screenshot Placeholder |
 | --- | --- |
-| Home / Landing Page | `docs/screenshots/home.png` |
-| Public Property Browse | `docs/screenshots/browse.png` |
-| Property Details | `docs/screenshots/property-details.png` |
-| Home Seeker Dashboard | `docs/screenshots/seeker-dashboard.png` |
-| Property Comparison | `docs/screenshots/compare.png` |
-| Owner Dashboard | `docs/screenshots/owner-dashboard.png` |
-| Admin Dashboard | `docs/screenshots/admin-dashboard.png` |
+| Home / Landing Page & Property Browse | ![Home Page](docs/screenshots/home.png) |
+| Property Details | ![Property Details](docs/screenshots/property-details.png) |
+| Home Seeker Dashboard | ![Home Seeker Dashboard](docs/screenshots/seeker-dashboard.png) |
+| Saved Homes | ![Saved Homes](docs/screenshots/saved_homes.png) |
+| Property Comparison | ![Property Comparison](docs/screenshots/compare.png) |
+| Messages | ![Messages](docs/screenshots/messages.png) |
+| Owner Dashboard | ![Owner Dashboard](docs/screenshots/owner-dashboard.png) |
+| My Listings | ![My Listings](docs/screenshots/my_listings.png) |
+| Admin Dashboard | ![Admin Dashboard](docs/screenshots/admin-dashboard.png) |
 
 <!-- Replace these placeholders with actual screenshots captured from the running application. -->
 
@@ -121,6 +129,7 @@ BasaChai addresses these challenges by providing a centralized platform where se
 ## Technology Stack
 
 ### Frontend
+
 - **React** (Component-based UI)
 - **JavaScript**
 - **Vite** (Build tool and dev server)
@@ -128,16 +137,19 @@ BasaChai addresses these challenges by providing a centralized platform where se
 - **React Router** (Client-side routing)
 
 ### Backend
+
 - **Python** (Runtime)
 - **Django** (Web framework)
 - **Django REST Framework** (RESTful API layer)
 - **Simple JWT** (Token-based authentication)
 
 ### Database and Storage
+
 - **PostgreSQL** (Primary relational database)
 - **Supabase Storage** (S3-compatible object storage for production media and private attachments)
 
 ### Authentication and Security
+
 - JWT authentication
 - HttpOnly refresh-token cookies
 - CSRF protection
@@ -146,6 +158,7 @@ BasaChai addresses these challenges by providing a centralized platform where se
 - Private message attachment storage
 
 ### Development and Deployment
+
 - **Git and GitHub** (Version control)
 - **VS Code** (Development environment)
 - **Vercel** (Frontend hosting)
@@ -166,11 +179,11 @@ BasaChai follows a decoupled frontend-backend architecture:
 - Supabase S3-compatible storage handles production media and private message attachments.
 
 **Application flow:**
+
 ```text
 React Frontend ──── HTTP / REST API ────► Django Backend ────► PostgreSQL
-                                               │
-                                               └────► Supabase Storage (S3 API)
-```
+                                              │
+                                              └────► Supabase Storage (S3 API)
 
 ---
 
@@ -181,6 +194,7 @@ Follow these instructions to run BasaChai locally.
 ### Prerequisites
 
 Make sure the following tools are installed:
+
 - Python 3.11+
 - Node.js and npm
 - PostgreSQL
@@ -189,48 +203,46 @@ Make sure the following tools are installed:
 ### Backend Setup
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/nahinsha/BashaChai.git
    cd BashaChai
-   ```
+
 
 2. **Navigate to the backend directory:**
-   ```bash
-   cd backend
-   ```
+
+   `cd backend`
 
 3. **Create your local environment file:**
-   ```powershell
-   if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-   ```
+
+   `if (-not (Test-Path .env)) { Copy-Item .env.example .env }`
+
    Configure the database values in `.env` for your local PostgreSQL instance.
 
 4. **Enable local environment loading:**
-   ```powershell
-   $env:BASACHAI_ENV = "development"
-   ```
+
+   `$env:BASACHAI_ENV = "development"`
 
 5. **Create and activate a virtual environment:**
-   ```powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
+
+   `python -m venv .venv`
+
+   `.\.venv\Scripts\Activate.ps1`
 
 6. **Install backend dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+
+   `pip install -r requirements.txt`
 
 7. **Apply database migrations:**
-   ```bash
-   python manage.py migrate
-   ```
+
+   `python manage.py migrate`
 
 8. **Start the Django development server:**
-   ```bash
-   python manage.py runserver
-   ```
+
+   `python manage.py runserver`
+
    Backend development server: `http://127.0.0.1:8000/`
+
 
 > **Note:** The local `.env` file is ignored by Git. With `DJANGO_DEBUG=true`, a temporary development secret key is generated if one is not configured. Existing shell or IDE environment values take precedence over `.env`. Production does not load this local environment file and requires an explicitly configured `DJANGO_SECRET_KEY`.
 
@@ -239,19 +251,17 @@ Make sure the following tools are installed:
 Open a separate terminal.
 
 1. **Navigate to the frontend directory:**
-   ```bash
-   cd frontend
-   ```
+
+   `cd frontend`
 
 2. **Install dependencies:**
-   ```bash
-   npm ci
-   ```
+
+   `npm ci`
 
 3. **Start the Vite development server:**
-   ```bash
-   npm run dev
-   ```
+
+   `npm run dev`
+
    The frontend will be available at the local URL displayed by Vite, usually: `http://localhost:5173/`
 
 During local development, Vite proxies `/api/v1` requests to Django at `http://127.0.0.1:8000`.
@@ -285,6 +295,7 @@ Configure the following environment variables in the Render service settings.
 #### Database Alternative
 
 Instead of `DATABASE_URL`, the backend can use individual database settings:
+
 - `DB_NAME`
 - `DB_USER`
 - `DB_PASSWORD`
@@ -294,6 +305,7 @@ Instead of `DATABASE_URL`, the backend can use individual database settings:
 #### Email Configuration
 
 For SMTP-based password-reset email delivery, configure:
+
 - `EMAIL_HOST`
 - `EMAIL_PORT`
 - `EMAIL_HOST_USER`
@@ -329,34 +341,9 @@ Configure the following variable in Vercel project settings:
 | `VITE_API_ROOT` | Backend API base URL, including `/api/v1` |
 
 **Example:**
+
 ```env
 VITE_API_ROOT=https://your-backend-domain/api/v1
-```
-
-The deployed frontend communicates directly with the backend API. The Vercel SPA rewrite serves frontend routes; it does not proxy API requests.
-
-Make sure the deployed frontend origin is included in the backend's `CORS_ALLOWED_ORIGINS` and `CSRF_TRUSTED_ORIGINS` settings where applicable. Use exact HTTPS origins without wildcard entries when credentialed cross-origin requests are enabled.
-
----
-
-## Testing and Validation
-
-The following commands can be used for basic project validation:
-
-**Backend:**
-```bash
-python manage.py check
-python manage.py test
-```
-
-**Frontend production build:**
-```bash
-npm run build
-```
-
-These checks help identify backend configuration issues, test failures, and frontend build errors.
-
----
 
 ## Deployment
 
@@ -373,8 +360,8 @@ Production environment variables must be configured in the respective hosting pl
 
 ## Project Links
 
-- **Live Application:** [https://basha-chai-xi.vercel.app/](https://basha-chai-xi.vercel.app/)
-- **Source Code Repository:** [https://github.com/nahinsha/BashaChai](https://github.com/nahinsha/BashaChai)
+- **Live Application:** [BasaChai](https://basha-chai-xi.vercel.app/)
+- **Source Code Repository:** [GitHub Repository](https://github.com/nahinsha/BashaChai)
 
 > **Note:** The live application is intended for demonstration and testing. Availability and performance may vary depending on free-tier platform quotas.
 
