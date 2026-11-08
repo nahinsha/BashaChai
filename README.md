@@ -124,7 +124,7 @@ BasaChai addresses these challenges by providing a centralized platform where se
 - **React** (Component-based UI)
 - **JavaScript**
 - **Vite** (Build tool and dev server)
-- **Tailwind CSS** (Styling)
+- **CSS** (Styling)
 - **React Router** (Client-side routing)
 
 ### Backend
